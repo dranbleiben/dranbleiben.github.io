@@ -1,0 +1,2244 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DRANBLEIBEN – Deutsch für Vietnamesen | Deutschkurse online A1–C1</title>
+  <meta name="description" content="Deutschkurse online für Vietnamesen in Deutschland – Pflegekräfte, Auszubildende, Prüfungsvorbereitung. Thầy Peter spricht Vietnamesisch. Kostenlose Probestunde!" />
+  <meta name="keywords" content="Deutschkurs Vietnamesen, DaF Vietnamesisch, Deutsch lernen Vietnam, tiếng Đức cho người Việt, Deutschkurs Pflegekräfte Vietnam" />
+  <meta property="og:title" content="DRANBLEIBEN – Deutsch für Vietnamesen" />
+  <meta property="og:description" content="Online-Deutschkurse speziell für vietnamesische Lernende. Erklärt auch auf Vietnamesisch. A1–C1. Kostenlose Probestunde!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dranbleiben.de" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="DRANBLEIBEN – Deutsch für Vietnamesen" />
+  <meta name="twitter:description" content="DaF-Kurse online für Vietnamesen. Thầy Peter – Muttersprache Vietnamesisch, Deutsch C2. Kostenlose Probestunde!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --rot:    #C8401A;
+      --dunkel: #1A2B4A;
+      --creme:  #F5F0E8;
+      --weiss:  #FFFFFF;
+      --grau:   #6B7280;
+      --hell:   #FDF8F3;
+      --gold:   #E8A020;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--creme);
+      color: var(--dunkel);
+      line-height: 1.7;
+    }
+
+    /* ── SPRACHUMSCHALTER ── */
+    .lang-de { display: none; }
+    .lang-vi { display: block; }
+    body.de .lang-de { display: block; }
+    body.de .lang-vi { display: none; }
+    /* inline spans */
+    span.lang-de { display: none; }
+    span.lang-vi { display: inline; }
+    body.de span.lang-de { display: inline; }
+    body.de span.lang-vi { display: none; }
+
+    /* ── LANGUAGE TOGGLE BAR ── */
+    .lang-bar {
+      background: var(--dunkel);
+      padding: 0.4rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.5rem;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+    }
+    .lang-bar span {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.75rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .lang-btn {
+      background: none;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.6);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      padding: 0.2rem 0.7rem;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn:hover, .lang-btn.active {
+      background: var(--rot);
+      border-color: var(--rot);
+      color: var(--weiss);
+    }
+
+    /* ── NAVIGATION ── */
+    nav {
+      position: fixed;
+      top: 30px; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(26,43,74,0.97);
+      backdrop-filter: blur(8px);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.15rem;
+      color: var(--weiss);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+    .nav-logo .pipe { color: var(--rot); }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--rot); }
+    .nav-cta {
+      background: var(--rot) !important;
+      color: var(--weiss) !important;
+      padding: 0.45rem 1.1rem;
+      border-radius: 4px;
+    }
+    .nav-cta:hover { background: #a83315 !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: var(--dunkel);
+      display: flex;
+      align-items: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -150px; right: -150px;
+      width: 550px; height: 550px;
+      background: radial-gradient(circle, rgba(200,64,26,0.2) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(232,160,32,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 880px; margin: 0 auto; }
+    .hero-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--rot);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 1.0;
+      color: var(--weiss);
+      margin-bottom: 0.5rem;
+    }
+    .hero h1 .pipe { color: var(--rot); }
+    .hero h1 .bleiben { color: var(--rot); }
+    .hero-tagline {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.95rem, 2vw, 1.2rem);
+      font-weight: 400;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.06em;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    .hero-sub {
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      color: rgba(255,255,255,0.65);
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+    .hero-sub strong { color: var(--weiss); font-weight: 700; }
+    .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      background: var(--rot);
+      color: var(--weiss);
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: #a83315; transform: translateY(-2px); }
+    .btn-ghost {
+      border: 2px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.8);
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .btn-ghost:hover { border-color: var(--rot); color: var(--rot); }
+    .hero-probe-note {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: 1rem;
+    }
+
+    /* ── SOCIAL BAR ── */
+    .social-bar {
+      background: var(--dunkel);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .social-bar-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.45rem 1rem;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: transform 0.15s, opacity 0.2s;
+      color: var(--weiss);
+    }
+    .social-link:hover { transform: translateY(-2px); opacity: 0.85; }
+    .social-link svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+    .sl-yt  { background: #FF0000; }
+    .sl-tt  { background: #010101; }
+    .sl-ig  { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+    .sl-fb  { background: #1877F2; }
+
+    /* ── BAND ── */
+    .band {
+      background: var(--rot);
+      padding: 1.1rem 2rem;
+      text-align: center;
+    }
+    .band p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: clamp(0.88rem, 1.8vw, 1.05rem);
+      color: var(--weiss);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 5rem 2rem; }
+    .container { max-width: 960px; margin: 0 auto; }
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rot);
+      margin-bottom: 0.75rem;
+    }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.7rem, 4vw, 2.7rem);
+      color: var(--dunkel);
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+    h2 em { font-style: normal; color: var(--rot); }
+    .lead {
+      font-size: 1.1rem;
+      color: var(--grau);
+      max-width: 600px;
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+
+    /* ── FÜR WEN / CHO AI ── */
+    .fuer-wen { background: var(--hell); }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+    .card {
+      background: var(--weiss);
+      border-radius: 8px;
+      padding: 1.75rem;
+      border-top: 4px solid var(--rot);
+      box-shadow: 0 2px 12px rgba(26,43,74,0.06);
+    }
+    .card-icon { font-size: 1.8rem; margin-bottom: 0.9rem; }
+    .card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--dunkel);
+      margin-bottom: 0.6rem;
+    }
+    .card p { font-size: 0.9rem; color: var(--grau); line-height: 1.65; }
+
+    /* ── WARUM / LÝ DO ── */
+    .warum { background: var(--dunkel); }
+    .warum h2 { color: var(--weiss); }
+    .warum .lead { color: rgba(255,255,255,0.55); }
+    .warum-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+    .punkt { display: flex; gap: 1rem; align-items: flex-start; }
+    .punkt-nr {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.6rem;
+      color: var(--rot);
+      line-height: 1;
+      min-width: 2rem;
+    }
+    .punkt-text h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--weiss);
+      margin-bottom: 0.35rem;
+      font-size: 0.95rem;
+    }
+    .punkt-text p { color: rgba(255,255,255,0.5); font-size: 0.88rem; line-height: 1.6; }
+
+    /* ── SOCIAL MEDIA SEKTION ── */
+    .social-section { background: var(--creme); }
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+    .social-card {
+      border-radius: 8px;
+      padding: 1.75rem;
+      text-align: center;
+      text-decoration: none;
+      color: var(--weiss);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: block;
+    }
+    .social-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+    .social-card.yt  { background: #FF0000; }
+    .social-card.tt  { background: #010101; }
+    .social-card.ig  { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+    .social-card.fb  { background: #1877F2; }
+    .social-card svg { width: 36px; height: 36px; fill: currentColor; margin-bottom: 0.75rem; }
+    .social-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .social-card p { font-size: 0.82rem; opacity: 0.85; line-height: 1.5; }
+    .social-card .handle {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      background: rgba(255,255,255,0.2);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+    }
+
+    /* ── PREISE / GIÁ ── */
+    .preise { background: var(--hell); }
+    .preise-intro {
+      background: var(--weiss);
+      border-left: 4px solid var(--rot);
+      padding: 1.5rem 1.75rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 3rem;
+      max-width: 680px;
+    }
+    .preise-intro p { color: var(--dunkel); line-height: 1.8; font-size: 0.95rem; }
+    .preise-intro p + p { margin-top: 0.75rem; }
+    .pakete {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .paket {
+      background: var(--weiss);
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 14px rgba(26,43,74,0.07);
+      position: relative;
+    }
+    .paket-empfohlen { border: 2px solid var(--rot); transform: scale(1.03); }
+    .badge {
+      position: absolute;
+      top: -14px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--rot);
+      color: var(--weiss);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      padding: 0.28rem 1rem;
+      border-radius: 20px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .paket-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rot);
+      margin-bottom: 0.5rem;
+    }
+    .paket-preis {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 2.5rem;
+      color: var(--dunkel);
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+    .paket-preis sup { font-size: 1rem; vertical-align: super; }
+    .paket-preis .unit { font-size: 1rem; font-weight: 400; color: var(--grau); }
+    .paket-badge-probe {
+      display: inline-block;
+      background: #FFF3CD;
+      color: #92640A;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.05em;
+    }
+    .paket-sub {
+      font-size: 0.8rem;
+      color: var(--grau);
+      margin-bottom: 1.4rem;
+      padding-bottom: 1.4rem;
+      border-bottom: 1px solid #E5E7EB;
+      line-height: 1.5;
+    }
+    .paket-liste { list-style: none; margin-bottom: 2rem; }
+    .paket-liste li {
+      font-size: 0.88rem;
+      color: var(--dunkel);
+      padding: 0.38rem 0 0.38rem 1.5rem;
+      position: relative;
+      line-height: 1.5;
+    }
+    .paket-liste li::before { content: '✓'; position: absolute; left: 0; color: var(--rot); font-weight: 700; }
+    .btn-paket {
+      display: block;
+      text-align: center;
+      padding: 0.85rem;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-paket-primary { background: var(--rot); color: var(--weiss); }
+    .btn-paket-primary:hover { background: #a83315; }
+    .btn-paket-outline { border: 2px solid var(--dunkel); color: var(--dunkel); }
+    .btn-paket-outline:hover { background: var(--dunkel); color: var(--weiss); }
+    .sonder {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+    .sonder-card {
+      background: var(--weiss);
+      border-radius: 8px;
+      padding: 1.5rem;
+      border: 1px solid #E5E7EB;
+    }
+    .sonder-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--dunkel);
+      margin-bottom: 0.5rem;
+    }
+    .sonder-card p { font-size: 0.85rem; color: var(--grau); line-height: 1.6; margin-bottom: 0.9rem; }
+    .sonder-card a { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.82rem; color: var(--rot); text-decoration: none; }
+    .sonder-card a:hover { text-decoration: underline; }
+
+    /* ── FAQ ── */
+    .faq { background: var(--creme); }
+    .faq-liste { margin-top: 2.5rem; }
+    .faq-item { border-bottom: 1px solid #E5E7EB; }
+    .faq-frage {
+      width: 100%; background: none; border: none; cursor: pointer;
+      text-align: left; padding: 1.2rem 0;
+      font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem;
+      color: var(--dunkel); display: flex; justify-content: space-between;
+      align-items: center; gap: 1rem;
+    }
+    .faq-frage:hover { color: var(--rot); }
+    .faq-icon { font-size: 1.2rem; color: var(--rot); transition: transform 0.25s; flex-shrink: 0; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-antwort {
+      display: none; padding-bottom: 1.2rem;
+      font-size: 0.92rem; color: var(--grau); line-height: 1.75; max-width: 680px;
+    }
+    .faq-item.open .faq-antwort { display: block; }
+
+    /* ── ABSCHLUSS ── */
+    .abschluss { background: var(--dunkel); text-align: center; }
+    .abschluss h2 { color: var(--weiss); max-width: 580px; margin: 0 auto 1.25rem; }
+    .abschluss .desc { color: rgba(255,255,255,0.55); max-width: 460px; margin: 0 auto 2rem; font-size: 1rem; line-height: 1.7; }
+    .mantra {
+      font-family: 'Montserrat', sans-serif; font-weight: 900;
+      font-size: clamp(1.3rem, 3vw, 2rem); color: var(--rot); margin-bottom: 0.75rem;
+    }
+    .probe-price-highlight {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dunkel);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.9rem;
+      border-radius: 3px;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── FOOTER ── */
+    footer { background: #0F1923; padding: 2.5rem 2rem; }
+    .footer-inner {
+      max-width: 960px; margin: 0 auto;
+      display: flex; flex-direction: column; align-items: center; gap: 1.25rem;
+    }
+    .footer-social-unused { display: flex; gap: 0.75rem; }
+    .footer-social a {
+      width: 36px; height: 36px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--weiss); transition: transform 0.15s, opacity 0.2s;
+      text-decoration: none;
+    }
+    .footer-social a:hover { transform: scale(1.15); opacity: 0.85; }
+    .footer-social a svg { width: 16px; height: 16px; fill: currentColor; }
+    .footer-social .fs-yt  { background: #FF0000; }
+    .footer-social .fs-tt  { background: #010101; border: 1px solid #333; }
+    .footer-social .fs-ig  { background: linear-gradient(135deg,#f09433,#dc2743,#bc1888); }
+    .footer-social .fs-fb  { background: #1877F2; }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: rgba(255,255,255,0.35); font-size: 0.8rem; text-decoration: none; }
+    .footer-links a:hover { color: var(--rot); }
+    .footer-copy { color: rgba(255,255,255,0.2); font-size: 0.78rem; text-align: center; }
+
+    /* ── ÜBER MICH / VỀ TÔI ── */
+    .ueber-mich { background: var(--creme); }
+
+    .ueber-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 3.5rem;
+      align-items: start;
+      margin-top: 2.5rem;
+    }
+
+    /* Foto-Spalte */
+    .ueber-foto-col { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .foto-rahmen {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(26,43,74,0.18);
+    }
+    .foto-rahmen img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+    .foto-rahmen::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 3px solid var(--rot);
+      border-radius: 10px;
+      pointer-events: none;
+    }
+
+    .foto-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: var(--dunkel);
+      line-height: 1.2;
+    }
+    .foto-name .viet-name {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--grau);
+      letter-spacing: 0.06em;
+      margin-top: 0.2rem;
+    }
+
+    /* Sprachen-Badges */
+    .sprachen-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+    }
+    .sprach-badge {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .sb-mutter  { background: #FEE2E2; color: #991B1B; }
+    .sb-c2      { background: #DCFCE7; color: #166534; }
+    .sb-b2      { background: #DBEAFE; color: #1E40AF; }
+    .sb-antik   { background: #F3E8FF; color: #6B21A8; }
+
+    /* Zitat-Box */
+    .peter-zitat {
+      background: var(--dunkel);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      position: relative;
+    }
+    .peter-zitat::before {
+      content: '"';
+      font-family: Georgia, serif;
+      font-size: 4rem;
+      color: var(--rot);
+      position: absolute;
+      top: -0.5rem;
+      left: 1rem;
+      line-height: 1;
+      opacity: 0.6;
+    }
+    .peter-zitat p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+      font-style: italic;
+      padding-top: 1.25rem;
+    }
+
+    /* Inhalt-Spalte */
+    .ueber-inhalt-col {}
+
+    .ueber-intro {
+      font-size: 1.05rem;
+      color: var(--dunkel);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    .ueber-intro strong { color: var(--rot); }
+
+    /* Kompetenz-Karten */
+    .kompetenz-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .kompetenz-karte {
+      background: var(--weiss);
+      border-radius: 8px;
+      padding: 1.4rem;
+      box-shadow: 0 2px 12px rgba(26,43,74,0.06);
+      border-top: 3px solid var(--rot);
+    }
+    .kompetenz-karte .k-icon { font-size: 1.5rem; margin-bottom: 0.6rem; }
+    .kompetenz-karte h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--dunkel);
+      margin-bottom: 0.5rem;
+    }
+    .kompetenz-karte ul { list-style: none; padding: 0; }
+    .kompetenz-karte ul li {
+      font-size: 0.82rem;
+      color: var(--grau);
+      padding: 0.22rem 0 0.22rem 1.1rem;
+      position: relative;
+      line-height: 1.5;
+    }
+    .kompetenz-karte ul li::before {
+      content: '→';
+      position: absolute; left: 0;
+      color: var(--rot); font-weight: 700; font-size: 0.72rem;
+    }
+
+    /* Credentials Timeline */
+    .cred-block { margin-top: 0.5rem; }
+    .cred-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rot);
+      margin-bottom: 1rem;
+    }
+    .cred-liste { display: flex; flex-direction: column; }
+    .cred-item {
+      display: flex;
+      gap: 1rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid #E5E7EB;
+      align-items: flex-start;
+    }
+    .cred-jahr {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.72rem;
+      color: var(--rot);
+      min-width: 65px;
+      padding-top: 0.1rem;
+      line-height: 1.4;
+    }
+    .cred-info h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--dunkel);
+      margin-bottom: 0.15rem;
+    }
+    .cred-info p { font-size: 0.8rem; color: var(--grau); line-height: 1.45; }
+
+    @media (max-width: 800px) {
+      .ueber-grid { grid-template-columns: 1fr; }
+      .ueber-foto-col { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
+      .foto-rahmen { width: 160px; flex-shrink: 0; }
+    }
+    @media (max-width: 600px) {
+      .kompetenz-grid { grid-template-columns: 1fr; }
+      .ueber-foto-col { flex-direction: column; }
+      .foto-rahmen { width: 100%; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      .warum-grid { grid-template-columns: 1fr; }
+      .sonder { grid-template-columns: 1fr; }
+      .paket-empfohlen { transform: none; }
+      .nav-links { display: none; }
+      .social-grid { grid-template-columns: 1fr 1fr; }
+      /* Kurs-Karten mobil */
+      .kurs-card-body { grid-template-columns: 1fr; }
+      .kurs-detail-liste { border-right: none; border-bottom: 1px solid #E5E7EB; }
+      .kurs-detail-liste:last-child { border-bottom: none; }
+      .kurs-card-footer { flex-direction: column; align-items: stretch; }
+      .kurs-card-footer .btn-primary { text-align: center; }
+      .kurs-tabs { gap: 0.35rem; }
+      .kurs-tab { font-size: 0.72rem; padding: 0.5rem 0.75rem; }
+      /* Trust-Bar mobil */
+      .trust-bar { gap: 0.75rem; }
+      .trust-item { font-size: 0.72rem; }
+      /* Hero mobil */
+      .hero { padding: 7rem 1.25rem 3rem; }
+      .hero h1 { font-size: clamp(2.4rem, 12vw, 4rem); }
+      .hero-buttons { flex-direction: column; }
+      .hero-buttons a { text-align: center; }
+      /* Über-mich mobil */
+      .ueber-grid { grid-template-columns: 1fr; }
+      .kompetenz-grid { grid-template-columns: 1fr; }
+      /* Goethe-Box mobil */
+      .goethe-box { flex-direction: column; gap: 0.75rem; }
+      /* Kontakt-Buttons mobil */
+      .kontakt-buttons { flex-direction: column; }
+      .btn-kontakt { justify-content: center; }
+      /* Chat-Widget mobil */
+      #chat-box { width: calc(100vw - 3rem); right: 0; }
+      #chat-widget { right: 1rem; bottom: 1rem; }
+    }
+    @media (max-width: 420px) {
+      .social-grid { grid-template-columns: 1fr; }
+      .kurs-tabs { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+      .kurs-tab { white-space: nowrap; }
+    }
+
+
+    /* ── TRUST-BAR ── */
+    .trust-bar {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      justify-content: flex-start;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .trust-item .ti-icon { font-size: 1rem; }
+    .trust-item strong { color: var(--rot); }
+
+    /* ── PFLEGEKRÄFTE-BADGE ── */
+    .pflege-badge {
+      display: inline-block;
+      background: var(--rot);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      padding: 0.22rem 0.7rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    /* ── KURS-DETAILS (Goethe-Stil) ── */
+    .kurs-tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid #E5E7EB;
+      padding-bottom: 0;
+    }
+    .kurs-tab {
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      padding: 0.6rem 1.2rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--grau);
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .kurs-tab:hover { color: var(--dunkel); }
+    .kurs-tab.active { color: var(--rot); border-bottom-color: var(--rot); }
+    .kurs-panel { display: none; }
+    .kurs-panel.active { display: block; }
+
+    .kurs-card {
+      background: var(--weiss);
+      border-radius: 10px;
+      box-shadow: 0 2px 16px rgba(26,43,74,0.07);
+      overflow: hidden;
+    }
+    .kurs-card-header {
+      background: var(--dunkel);
+      color: #fff;
+      padding: 1.5rem 2rem;
+    }
+    .kurs-card-header h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .kurs-card-header p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.88rem;
+    }
+    .kurs-card-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .kurs-detail-liste {
+      padding: 1.75rem 2rem;
+      border-right: 1px solid #E5E7EB;
+    }
+    .kurs-detail-liste:last-child { border-right: none; }
+    .kd-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid #F3F4F6;
+    }
+    .kd-item:last-child { border-bottom: none; }
+    .kd-icon { font-size: 1.1rem; min-width: 1.4rem; padding-top: 0.05rem; }
+    .kd-text {}
+    .kd-label {
+      font-size: 0.72rem;
+      color: var(--grau);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+    .kd-value {
+      font-size: 0.92rem;
+      color: var(--dunkel);
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .kurs-card-footer {
+      padding: 1.5rem 2rem;
+      background: #F9FAFB;
+      border-top: 1px solid #E5E7EB;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .kurs-preis-block {}
+    .kurs-preis-label { font-size: 0.72rem; color: var(--grau); text-transform: uppercase; letter-spacing: 0.08em; font-family: 'Montserrat', sans-serif; font-weight: 700; display: block; margin-bottom: 0.1rem; }
+    .kurs-preis-zahl { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.8rem; color: var(--dunkel); }
+    .kurs-preis-zahl small { font-size: 0.9rem; font-weight: 400; color: var(--grau); }
+    .kurs-inkl { font-size: 0.78rem; color: var(--grau); margin-top: 0.2rem; }
+    @media (max-width: 640px) {
+      .kurs-card-body { grid-template-columns: 1fr; }
+      .kurs-detail-liste { border-right: none; border-bottom: 1px solid #E5E7EB; }
+      .kurs-detail-liste:last-child { border-bottom: none; }
+    }
+
+    /* ── GOETHE-FAQ ── */
+    .goethe-box {
+      background: var(--dunkel);
+      border-radius: 8px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+    .goethe-box .g-icon { font-size: 2rem; flex-shrink: 0; }
+    .goethe-box h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--rot);
+      margin-bottom: 0.5rem;
+    }
+    .goethe-box p { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.7; }
+    .goethe-box strong { color: #fff; }
+
+
+    /* ── VIDEO-SEKTION ── */
+    .video-section { background: var(--dunkel); padding: 5rem 2rem; }
+    .video-section h2 { color: var(--weiss); }
+    .video-section .lead { color: rgba(255,255,255,0.55); }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+      margin-top: 2.5rem;
+      background: #0F1923;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+    .video-placeholder {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1A2B4A 0%, #0F1923 100%);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .video-placeholder:hover { opacity: 0.9; }
+    .video-play-btn {
+      width: 72px; height: 72px;
+      background: var(--rot);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 4px 20px rgba(200,64,26,0.4);
+    }
+    .video-play-btn svg { width: 30px; height: 30px; fill: #fff; margin-left: 4px; }
+    .video-placeholder h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+    .video-placeholder p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+    }
+    .video-coming-soon {
+      display: inline-block;
+      background: var(--rot);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      padding: 0.25rem 0.75rem;
+      border-radius: 3px;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    /* ── KONTAKT-BUTTONS ── */
+    .kontakt-buttons { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:0.75rem; }
+    .btn-kontakt {
+      display:inline-flex; align-items:center; gap:0.55rem;
+      padding:0.9rem 1.75rem; border-radius:4px;
+      font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.95rem;
+      text-decoration:none; color:#fff; transition:transform 0.15s, opacity 0.2s;
+    }
+    .btn-kontakt:hover { transform:translateY(-2px); opacity:0.9; }
+    .btn-kontakt svg { width:20px; height:20px; flex-shrink:0; }
+    .btn-wa   { background:#25D366; }
+    .btn-zalo { background:#0068FF; }
+
+    /* ── CHAT WIDGET ── */
+    #chat-widget { position:fixed; bottom:1.5rem; right:1.5rem; z-index:9999; display:flex; flex-direction:column; align-items:flex-end; gap:0.75rem; }
+    #chat-box { width:340px; background:#fff; border-radius:16px; box-shadow:0 8px 40px rgba(26,43,74,0.18); display:none; flex-direction:column; overflow:hidden; border:1px solid #E5E7EB; }
+    #chat-box.open { display:flex; }
+    .chat-header { background:var(--dunkel); color:#fff; padding:1rem 1.25rem; font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.88rem; display:flex; align-items:center; justify-content:space-between; }
+    .chat-header-left { display:flex; align-items:center; gap:0.6rem; }
+    .chat-dot { width:8px; height:8px; background:#25D366; border-radius:50%; }
+    #chat-close { background:none; border:none; color:rgba(255,255,255,0.6); cursor:pointer; font-size:1.1rem; padding:0; line-height:1; }
+    #chat-close:hover { color:#fff; }
+    #chat-messages { flex:1; overflow-y:auto; padding:1rem; display:flex; flex-direction:column; gap:0.75rem; background:#F9FAFB; max-height:300px; }
+    .msg { max-width:85%; padding:0.65rem 0.9rem; border-radius:12px; font-size:0.86rem; line-height:1.55; }
+    .msg-bot { background:var(--dunkel); color:#fff; align-self:flex-start; border-bottom-left-radius:3px; }
+    .msg-user { background:var(--rot); color:#fff; align-self:flex-end; border-bottom-right-radius:3px; }
+    #chat-input-row { display:flex; gap:0.5rem; padding:0.75rem; border-top:1px solid #E5E7EB; background:#fff; }
+    #chat-input { flex:1; border:1px solid #D1D5DB; border-radius:8px; padding:0.5rem 0.75rem; font-size:0.86rem; font-family:'Lato',sans-serif; outline:none; }
+    #chat-input:focus { border-color:var(--rot); }
+    #chat-send { background:var(--rot); border:none; border-radius:8px; color:#fff; cursor:pointer; padding:0.5rem 0.9rem; font-size:1rem; transition:background 0.2s; }
+    #chat-send:hover { background:#a83315; }
+    #chat-toggle-wrap { position:relative; }
+    #chat-toggle { width:56px; height:56px; background:var(--rot); border-radius:50%; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(200,64,26,0.35); transition:transform 0.2s; color:#fff; }
+    #chat-toggle:hover { transform:scale(1.08); }
+    #chat-toggle svg { width:26px; height:26px; fill:currentColor; }
+    .chat-badge { position:absolute; top:-4px; right:-4px; background:#25D366; color:#fff; border-radius:50%; width:18px; height:18px; font-size:0.65rem; font-weight:700; display:flex; align-items:center; justify-content:center; font-family:'Montserrat',sans-serif; }
+    @media (max-width:400px) { #chat-box { width:calc(100vw - 2rem); } }
+  </style>
+</head>
+<body>
+
+<!-- SPRACHUMSCHALTER -->
+<div class="lang-bar">
+  <span class="lang-vi">Ngôn ngữ / Sprache:</span>
+  <span class="lang-de">Sprache / Ngôn ngữ:</span>
+  <button class="lang-btn active" id="btn-vi" onclick="setLang('vi')">🇻🇳 Tiếng Việt</button>
+  <button class="lang-btn" id="btn-de" onclick="setLang('de')">🇩🇪 Deutsch</button>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#" class="nav-logo">DRAN<span class="pipe">|</span>BLEIBEN</a>
+  <ul class="nav-links">
+    <li><a href="#fuer-wen"><span class="lang-vi">Cho ai?</span><span class="lang-de">Für wen?</span></a></li>
+    <li><a href="#ueber-mich"><span class="lang-vi">Thầy Peter</span><span class="lang-de">Über Peter</span></a></li>
+    <li><a href="#warum"><span class="lang-vi">Tại sao Peter?</span><span class="lang-de">Warum Peter?</span></a></li>
+    <li><a href="#video"><span class="lang-vi">Video</span><span class="lang-de">Video</span></a></li>
+    <li><a href="#social"><span class="lang-vi">Mạng xã hội</span><span class="lang-de">Social Media</span></a></li>
+    <li><a href="#preise"><span class="lang-vi">Giá cả</span><span class="lang-de">Preise</span></a></li>
+    <li><a href="#kontakt" class="nav-cta">
+      <span class="lang-vi">Học thử MIỄN PHÍ</span>
+      <span class="lang-de">Kostenlos testen</span>
+    </a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">
+      <span class="lang-vi">Khóa học tiếng Đức cho người Việt tại Đức</span>
+      <span class="lang-de">Deutschkurse für Vietnamesen in Deutschland</span>
+    </p>
+    <h1>DRAN<span class="pipe">|</span><span class="bleiben">BLEIBEN</span></h1>
+    <p class="hero-tagline">
+      <span class="lang-vi">Kiên trì. Không bỏ cuộc. Tiến lên.</span>
+      <span class="lang-de">Dranbleiben. Nicht aufgeben. Vorwärts.</span>
+    </p>
+    <p class="hero-sub">
+      <span class="lang-vi">
+        Học tiếng Đức không dễ.<br>
+        Bỏ cuộc thì dễ hơn.<br>
+        <strong>Nhưng bạn không ở đây để bỏ cuộc.</strong>
+      </span>
+      <span class="lang-de">
+        Deutsch lernen ist schwer.<br>
+        Aufgeben ist leichter.<br>
+        <strong>Aber du bist nicht hier um aufzugeben.</strong>
+      </span>
+    </p>
+    <div class="hero-buttons">
+      <a href="#kontakt" class="btn-primary">
+        <span class="lang-vi">Học thử MIỄN PHÍ ngay</span>
+        <span class="lang-de">Kostenlose Probestunde</span>
+      </a>
+      <a href="#preise" class="btn-ghost">
+        <span class="lang-vi">Xem tất cả khóa học</span>
+        <span class="lang-de">Alle Kurse ansehen</span>
+      </a>
+    </div>
+    <p class="hero-probe-note">
+      <span class="lang-vi">Hoàn toàn miễn phí. Không áp lực. Không cam kết.</span>
+      <span class="lang-de">Komplett kostenlos. Kein Druck. Keine Verpflichtung.</span>
+    </p>
+    <div class="trust-bar">
+      <div class="trust-item"><span class="ti-icon">🎓</span><span><strong>Mag.Theol.</strong> Note 1,5</span></div>
+      <div class="trust-item"><span class="ti-icon">🏫</span><span><strong>Gymnasium</strong>-Lehrer</span></div>
+      <div class="trust-item"><span class="ti-icon">🇻🇳</span><span>Muttersprachlich <strong>Vietnamesisch</strong></span></div>
+      <div class="trust-item"><span class="ti-icon">🇩🇪</span><span>Deutsch <strong>C2</strong></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL BAR -->
+<div class="social-bar">
+  <span class="social-bar-label">
+    <span class="lang-vi">Theo dõi chúng tôi</span>
+    <span class="lang-de">Folge uns</span>
+  </span>
+  <a href="https://youtube.com/@dranbleiben" target="_blank" class="social-link sl-yt">
+    <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+    YouTube
+  </a>
+  <a href="https://tiktok.com/@dranbleiben" target="_blank" class="social-link sl-tt">
+    <svg viewBox="0 0 24 24"><path d="M19.6 3.3A4.5 4.5 0 0 1 15.2 0h-3.3v16.5a2.7 2.7 0 0 1-2.7 2.4 2.7 2.7 0 0 1-2.7-2.7 2.7 2.7 0 0 1 2.7-2.7c.26 0 .52.04.76.1V10.2a6 6 0 0 0-.76-.05A6 6 0 0 0 3.2 16.2 6 6 0 0 0 9.2 22.2a6 6 0 0 0 6-6V8.1a7.8 7.8 0 0 0 4.6 1.5V6.3a4.5 4.5 0 0 1-2.2-3z"/></svg>
+    TikTok
+  </a>
+  <a href="https://instagram.com/dranbleiben" target="_blank" class="social-link sl-ig">
+    <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.2 4.8 1.7 5 5 .1 1.3.1 1.6.1 4.9s0 3.6-.1 4.9c-.2 3.3-1.7 4.8-5 5-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.2-4.8-1.7-5-5C2 16.6 2 16.3 2 13s0-3.6.1-4.9c.2-3.3 1.7-4.8 5-5C8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.0 8.3 0 8.7 0 12s0 3.7.1 4.9C.3 21.3 2.7 23.7 7.1 23.9c1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
+    Instagram
+  </a>
+  <a href="https://facebook.com/dranbleiben" target="_blank" class="social-link sl-fb">
+    <svg viewBox="0 0 24 24"><path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1C0 18.1 4.4 23 10.1 24v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3H15.8c-1.5 0-2 .9-2 1.9v2.3h3.3l-.5 3.5h-2.8V24C19.6 23 24 18.1 24 12.1z"/></svg>
+    Facebook
+  </a>
+  <a href="https://chat.whatsapp.com/DEIN-LINK-HIER" target="_blank" class="social-link" style="background:#25D366;">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741 1.013 1.017-3.773-.236-.374A9.86 9.86 0 0 1 2.1 12c0-5.464 4.436-9.9 9.9-9.9 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.464-4.437 9.9-9.9 9.9z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<!-- BAND -->
+<div class="band">
+  <p>
+    <span class="lang-vi">Dạy bằng tiếng Đức – giải thích bằng tiếng Việt khi cần. Vì thầy hiểu bạn nghĩ như thế nào.</span>
+    <span class="lang-de">Unterricht auf Deutsch – erklärt auch auf Vietnamesisch. Weil ich weiß wie du denkst.</span>
+  </p>
+</div>
+
+<!-- FÜR WEN / CHO AI -->
+<section class="fuer-wen" id="fuer-wen">
+  <div class="container">
+    <p class="section-label">
+      <span class="lang-vi">Cho ai?</span>
+      <span class="lang-de">Für wen?</span>
+    </p>
+    <h2>
+      <span class="lang-vi">Bạn <em>không đơn độc</em> trong chuyện này.</span>
+      <span class="lang-de">Du bist <em>nicht allein</em> damit.</span>
+    </h2>
+    <p class="lead">
+      <span class="lang-vi">Tôi dạy những người đang sống và làm việc tại Đức và vẫn đang học tiếng Đức. Điều đó xứng đáng được tôn trọng và được dạy đúng cách.</span>
+      <span class="lang-de">Ich unterrichte Menschen die mitten im deutschen Alltag stecken und trotzdem Deutsch lernen. Das verdient Respekt – und den richtigen Unterricht.</span>
+    </p>
+    <div class="cards">
+      <div class="card" style="border-top-color: var(--rot); position:relative;">
+        <span class="pflege-badge">🏥 <span class="lang-vi">Phổ biến nhất</span><span class="lang-de">Beliebtestes Angebot</span></span>
+        <div class="card-icon">💉</div>
+        <h3><span class="lang-vi">Điều dưỡng viên & Công nhận B2</span><span class="lang-de">Pflegekräfte & Anerkennung B2</span></h3>
+        <p>
+          <span class="lang-vi">Bạn đang làm việc trong ngành điều dưỡng và cần đạt B2 để được công nhận bằng cấp tại Đức? Tôi biết chính xác con đường này – và giúp bạn đến đích.</span>
+          <span class="lang-de">Du arbeitest in der Pflege und brauchst B2 für die Anerkennung in Deutschland? Ich kenne genau diesen Weg – und begleite dich bis zum Ziel.</span>
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎓</div>
+        <h3><span class="lang-vi">Học nghề</span><span class="lang-de">Auszubildende</span></h3>
+        <p>
+          <span class="lang-vi">Người hướng dẫn nói nhanh. Đồng nghiệp nói đùa mà bạn không hiểu. Trường dạy nghề thì đòi hỏi cao. Tôi giúp bạn từng bước một.</span>
+          <span class="lang-de">Berufsschule, Ausbilder, Kollegen – alles auf Deutsch. Ich helfe dir Schritt für Schritt, ohne dass du dich verloren fühlst.</span>
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌏</div>
+        <h3><span class="lang-vi">Người mới đến Đức</span><span class="lang-de">Neuankömmlinge</span></h3>
+        <p>
+          <span class="lang-vi">Bạn vừa đến Đức và muốn hòa nhập cuộc sống thường ngày càng sớm càng tốt. A1 đến B1 – chúng ta cùng xây dựng nền tảng vững chắc.</span>
+          <span class="lang-de">Du bist frisch in Deutschland und willst im Alltag ankommen. A1 bis B1 – wir bauen gemeinsam dein Fundament.</span>
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3><span class="lang-vi">Thi chứng chỉ</span><span class="lang-de">Prüfungskandidaten</span></h3>
+        <p>
+          <span class="lang-vi">Goethe, telc, ÖSD – kỳ thi đang đến và bạn muốn đỗ ngay lần đầu. Tôi biết rõ các định dạng thi và luyện tập trực tiếp cùng bạn.</span>
+          <span class="lang-de">Goethe, telc, ÖSD – die Prüfung kommt und du willst sie beim ersten Versuch bestehen. Ich trainiere gezielt mit dir.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÜBER MICH / VỀ TÔI -->
+<section class="ueber-mich" id="ueber-mich">
+  <div class="container">
+    <p class="section-label">
+      <span class="lang-vi">Về thầy giáo</span>
+      <span class="lang-de">Über mich</span>
+    </p>
+    <h2>
+      <span class="lang-vi">Người đứng sau <em>DRANBLEIBEN</em>.</span>
+      <span class="lang-de">Der Mensch hinter <em>DRANBLEIBEN</em>.</span>
+    </h2>
+
+    <div class="ueber-grid">
+
+      <!-- LINKE SPALTE: Foto + Name + Sprachen + Zitat -->
+      <div class="ueber-foto-col">
+        <div class="foto-rahmen">
+          <!-- Bewerbungsfoto: ersetze src durch echten Bildpfad wenn online -->
+          <img
+            src="data:image/jpeg;base64,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"
+            alt="Hiển Nguyễn – DRANBLEIBEN"
+            style="width:100%; display:block; border-radius:10px;"
+          />
+        </div>
+
+        <div>
+          <p class="foto-name">
+            <span class="lang-vi">Hiển Nguyễn</span>
+            <span class="lang-de">Peter Hiển Nguyễn</span>
+          </p>
+
+          <div class="sprachen-row" style="margin-top:0.75rem;">
+            <span class="sprach-badge sb-mutter">🇻🇳 Tiếng Việt – Muttersprache</span>
+            <span class="sprach-badge sb-c2">🇩🇪 Deutsch – C2</span>
+            <span class="sprach-badge sb-b2">🇬🇧 Englisch – C1 (IELTS)</span>
+            <span class="sprach-badge sb-antik">📜 Latein</span>
+            <span class="sprach-badge sb-antik">📜 Altgriechisch</span>
+            <span class="sprach-badge sb-antik">📜 Althebräisch</span>
+          </div>
+        </div>
+
+        <div class="peter-zitat">
+          <p>
+            <span class="lang-vi">Tôi biết tiếng Đức khó đến mức nào đối với người Việt. Không phải vì tôi đọc trong sách giáo khoa – mà vì tôi đã tự trải qua điều đó. Chính vì thế tôi dạy khác đi.</span>
+            <span class="lang-de">Ich weiß wie schwer Deutsch für Vietnamesen ist. Nicht weil ich es im Lehrbuch gelesen habe – sondern weil ich es selbst durchlebt habe. Genau deshalb unterrichte ich anders.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- RECHTE SPALTE: Intro + Kompetenzkarten + Credentials -->
+      <div class="ueber-inhalt-col">
+
+        <p class="ueber-intro">
+          <span class="lang-vi">
+            Tôi là <strong>Hiển Nguyễn</strong> – sinh ra ở Khánh Hòa, Việt Nam, học thần học và triết học tại Đức với bằng <strong>Magister Theologiae (note 1,5)</strong>. Tôi là <strong>giáo viên Tôn giáo tại một trường Gymnasium</strong> dạy học sinh người Đức bản ngữ, đồng thời dạy tiếng Đức cho người Việt trong nhiều năm. Tôi là người duy nhất kết hợp: tiếng Việt là tiếng mẹ đẻ, trình độ Đức ngữ C2, đào tạo sư phạm bài bản và hiểu sâu cả hai nền văn hóa.
+          </span>
+          <span class="lang-de">
+            Ich bin <strong>Peter Hiển Nguyễn</strong> – geboren in Khánh Hòa, Vietnam, studiert in Deutschland mit dem Abschluss <strong>Magister Theologiae (Note 1,5)</strong>. Ich unterrichte Religion an einem <strong>Gymnasium in NRW</strong> für deutschmuttersprachliche Schüler und lehre seit Jahren Deutsch für Vietnamesen. Ich bin die einzige Lehrperson die vereint: Vietnamesisch als Muttersprache, Deutsch C2, pädagogische Fachausbildung und tiefes Verständnis beider Kulturen.
+          </span>
+        </p>
+
+        <!-- KOMPETENZKARTEN -->
+        <div class="kompetenz-grid">
+
+          <div class="kompetenz-karte">
+            <div class="k-icon">🎓</div>
+            <h4><span class="lang-vi">Bằng cấp & Học vấn</span><span class="lang-de">Abschluss & Bildung</span></h4>
+            <ul>
+              <li><span class="lang-vi">Magister Theologiae – Note 1,5</span><span class="lang-de">Magister Theologiae – Note 1,5</span></li>
+              <li><span class="lang-vi">Triết học & Thần học Công giáo, 5 năm</span><span class="lang-de">Philosophie & Kath. Theologie, 5 Jahre</span></li>
+              <li><span class="lang-vi">Stipendiat Konrad-Adenauer-Stiftung</span><span class="lang-de">Stipendiat der Konrad-Adenauer-Stiftung</span></li>
+              <li><span class="lang-vi">DAAD-Stipendium</span><span class="lang-de">DAAD-Stipendium</span></li>
+              </ul>
+          </div>
+
+          <div class="kompetenz-karte">
+            <div class="k-icon">📚</div>
+            <h4><span class="lang-vi">Năng lực ngôn ngữ</span><span class="lang-de">Sprachkompetenz</span></h4>
+            <ul>
+              <li><span class="lang-vi">Tiếng Việt – Tiếng mẹ đẻ</span><span class="lang-de">Vietnamesisch – Muttersprache</span></li>
+              <li><span class="lang-vi">Tiếng Đức – C2 (giảng dạy tại Gymnasium cho học sinh bản ngữ)</span><span class="lang-de">Deutsch – C2 (Unterricht für Muttersprachler am Gymnasium)</span></li>
+              <li><span class="lang-vi">Tiếng Anh – C1 (IELTS)</span><span class="lang-de">Englisch – C1 (IELTS-Zertifikat)</span></li>
+              <li><span class="lang-vi">Latinh – học thuật</span><span class="lang-de">Latein – akademisch</span></li>
+              <li><span class="lang-vi">Tiếng Hy Lạp cổ – học thuật</span><span class="lang-de">Altgriechisch – akademisch</span></li>
+              <li><span class="lang-vi">Tiếng Hebrew cổ – học thuật</span><span class="lang-de">Althebräisch – akademisch</span></li>
+            </ul>
+          </div>
+
+          <div class="kompetenz-karte">
+            <div class="k-icon">🏫</div>
+            <h4><span class="lang-vi">Kinh nghiệm giảng dạy</span><span class="lang-de">Unterrichtserfahrung</span></h4>
+            <ul>
+              <li><span class="lang-vi">Giáo viên Tôn giáo tại Gymnasium (học sinh người Đức bản ngữ, lớp 5–10)</span><span class="lang-de">Religionslehrer an einem Gymnasium (Muttersprachler, Klassen 5–10)</span></li>
+              <li><span class="lang-vi">DaF cho điều dưỡng viên người Việt (A1–C1)</span><span class="lang-de">DaF für vietnamesische Pflegekräfte (A1–C1)</span></li>
+              <li><span class="lang-vi">DaF cho học nghề và người mới đến Đức</span><span class="lang-de">DaF für Auszubildende und Neuankömmlinge</span></li>
+
+            </ul>
+          </div>
+
+          <div class="kompetenz-karte">
+            <div class="k-icon">🎤</div>
+            <h4><span class="lang-vi">Đào tạo giọng nói & Phát âm</span><span class="lang-de">Stimmbildung & Sprecherziehung</span></h4>
+            <ul>
+              <li><span class="lang-vi">Đào tạo bài bản về luyện giọng (Stimmbildung)</span><span class="lang-de">Professionelle Stimmbildungsausbildung</span></li>
+              <li><span class="lang-vi">Huấn luyện phát âm (Aussprachetraining)</span><span class="lang-de">Aussprachetraining und Artikulationsübungen</span></li>
+              <li><span class="lang-vi">Tu từ học và ngôn ngữ cơ thể (Rhetorik, Körperhaltung)</span><span class="lang-de">Rhetorik und Körpersprache (Priesterseminar)</span></li>
+              <li><span class="lang-vi">Huấn luyện tâm lý mục vụ (Pastoralpsychologie)</span><span class="lang-de">Pastoralpsychologie und Coaching-Kompetenz</span></li>
+              <li><span class="lang-vi">Tư vấn cá nhân (Seelsorge / Coaching)</span><span class="lang-de">Seelsorgliche Begleitung und Einzelcoaching</span></li>
+            </ul>
+          </div>
+
+        </div><!-- /kompetenz-grid -->
+
+        <!-- CREDENTIALS TIMELINE -->
+        <div class="cred-block">
+          <p class="cred-title">
+            <span class="lang-vi">Hành trình học vấn & nghề nghiệp</span>
+            <span class="lang-de">Bildungs- & Berufsweg</span>
+          </p>
+          <div class="cred-liste">
+
+
+
+            <div class="cred-item">
+              <div class="cred-jahr">2021–heute</div>
+              <div class="cred-info">
+                <h5><span class="lang-vi">Giáo viên Tôn giáo – Gymnasium (NRW)</span><span class="lang-de">Religionslehrer – Gymnasium in NRW</span></h5>
+                <p><span class="lang-vi">Dạy học sinh Đức bản ngữ, lớp 5–10. Bằng chứng thực tế về trình độ C2 và năng lực sư phạm.</span><span class="lang-de">Unterricht für deutschmuttersprachliche Schüler, Klassen 5–10. Realer Beweis für C2-Niveau und didaktische Kompetenz.</span></p>
+              </div>
+            </div>
+
+            <div class="cred-item">
+              <div class="cred-jahr">2021–heute</div>
+              <div class="cred-info">
+                <h5><span class="lang-vi">DRANBLEIBEN – Giáo viên tiếng Đức cho người Việt</span><span class="lang-de">DRANBLEIBEN – DaF-Lehrer für Vietnamesen</span></h5>
+                <p><span class="lang-vi">Điều dưỡng viên, học nghề, chuẩn bị thi Goethe/telc – A1 đến C1. Online qua Zoom.</span><span class="lang-de">Pflegekräfte, Auszubildende, Prüfungsvorbereitung Goethe/telc – A1 bis C1. Online via Zoom.</span></p>
+              </div>
+            </div>
+
+            <div class="cred-item">
+              <div class="cred-jahr">2016–2021</div>
+              <div class="cred-info">
+                <h5><span class="lang-vi">Đào tạo linh mục & Mục vụ – Tổng giáo phận Köln</span><span class="lang-de">Priesterausbildung & Pastoralpsychologie – Erzbistum Köln</span></h5>
+                <p><span class="lang-vi">Tâm lý mục vụ, luyện giọng, phát âm, tu từ học, ngôn ngữ cơ thể – nền tảng huấn luyện giọng nói chuyên nghiệp.</span><span class="lang-de">Pastoralpsychologie, Stimmbildung, Aussprachetraining, Rhetorik, Körperhaltung – professionelle Sprachausbildung.</span></p>
+              </div>
+            </div>
+
+            <div class="cred-item">
+              <div class="cred-jahr">2015–2020</div>
+              <div class="cred-info">
+                <h5><span class="lang-vi">Magister Theologiae – Triết học & Thần học (Note 1,5)</span><span class="lang-de">Magister Theologiae – Philosophie & Theologie (Note 1,5)</span></h5>
+                <p><span class="lang-vi">Triết học & Thần học Công giáo · Latinh, Tiếng Hy Lạp cổ, Tiếng Hebrew cổ · Stipendiat Konrad-Adenauer-Stiftung</span><span class="lang-de">Philosophie & Kath. Theologie · Latein, Altgriechisch, Althebräisch · Stipendiat Konrad-Adenauer-Stiftung</span></p>
+              </div>
+            </div>
+
+
+          </div>
+        </div><!-- /cred-block -->
+
+      </div><!-- /ueber-inhalt-col -->
+    </div><!-- /ueber-grid -->
+  </div>
+</section>
+
+<!-- WARUM PETER / TẠI SAO PETER -->
+<section class="warum" id="warum">
+  <div class="container">
+    <p class="section-label">
+      <span class="lang-vi">Tại sao DRANBLEIBEN?</span>
+      <span class="lang-de">Warum DRANBLEIBEN?</span>
+    </p>
+    <h2>
+      <span class="lang-vi">Tôi nói <em>ngôn ngữ của bạn</em>.<br>Theo nghĩa đen.</span>
+      <span class="lang-de">Ich spreche <em>deine Sprache</em>.<br>Buchstäblich.</span>
+    </h2>
+    <p class="lead">
+      <span class="lang-vi">Tôi là Peter. Tiếng Việt là tiếng mẹ đẻ của tôi. Tôi sống ở Đức và dạy tiếng Đức nhiều năm nay. Tôi biết chính xác chỗ nào khó – và tại sao.</span>
+      <span class="lang-de">Ich bin Peter. Vietnamesisch ist meine Muttersprache, ich lebe in Deutschland und unterrichte Deutsch seit Jahren. Ich weiß genau wo es wehtut – und warum.</span>
+    </p>
+    <div class="warum-grid">
+      <div class="punkt">
+        <div class="punkt-nr">01</div>
+        <div class="punkt-text">
+          <h4><span class="lang-vi">Tiếng Việt khi cần</span><span class="lang-de">Vietnamesisch wenn nötig</span></h4>
+          <p>
+            <span class="lang-vi">Khi bạn không hiểu, chúng ta có thể giải thích nhanh bằng tiếng Việt. Đó không phải dấu hiệu yếu kém – đó là cách học thông minh.</span>
+            <span class="lang-de">Wenn du etwas nicht verstehst, klären wir es kurz auf Vietnamesisch. Das ist kein Zeichen von Schwäche – das ist smarter Spracherwerb.</span>
+          </p>
+        </div>
+      </div>
+      <div class="punkt">
+        <div class="punkt-nr">02</div>
+        <div class="punkt-text">
+          <h4><span class="lang-vi">Tôi biết lỗi của bạn</span><span class="lang-de">Ich kenne deine Fehler</span></h4>
+          <p>
+            <span class="lang-vi">Mạo từ. Cách 3. Trật tự từ. Tôi biết những bẫy ngữ pháp nào khó nhất với người Việt – và tôi giải thích theo cách khác.</span>
+            <span class="lang-de">Der Artikel. Der Dativ. Die Wortstellung. Ich weiß welche Grammatikfallen für Vietnamesen besonders schwer sind – und erkläre sie anders.</span>
+          </p>
+        </div>
+      </div>
+      <div class="punkt">
+        <div class="punkt-nr">03</div>
+        <div class="punkt-text">
+          <h4><span class="lang-vi">Được đào tạo sư phạm</span><span class="lang-de">Pädagogisch ausgebildet</span></h4>
+          <p>
+            <span class="lang-vi">Tôi dạy chính thức tại một trường Gymnasium ở Đức. Phương pháp, giáo học pháp, tâm lý học – đó là nghề của tôi, không phải sở thích.</span>
+            <span class="lang-de">Ich unterrichte hauptberuflich an einem Gymnasium. Methodik, Didaktik, Lernpsychologie – das ist mein Handwerk, nicht mein Hobby.</span>
+          </p>
+        </div>
+      </div>
+      <div class="punkt">
+        <div class="punkt-nr">04</div>
+        <div class="punkt-text">
+          <h4><span class="lang-vi">100% online, 0% đi lại</span><span class="lang-de">100% online, 0% Fahrweg</span></h4>
+          <p>
+            <span class="lang-vi">Bạn học tại nhà qua Zoom. Dù bạn ở Düsseldorf, München hay Berlin – buổi học đến với bạn.</span>
+            <span class="lang-de">Du lernst von zuhause via Zoom. Egal ob Düsseldorf, München oder Berlin – der Unterricht kommt zu dir.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL MEDIA SEKTION -->
+<section class="social-section" id="social">
+  <div class="container">
+    <p class="section-label">
+      <span class="lang-vi">Mạng xã hội</span>
+      <span class="lang-de">Social Media</span>
+    </p>
+    <h2>
+      <span class="lang-vi">Học tiếng Đức <em>mọi lúc mọi nơi</em>.</span>
+      <span class="lang-de">Deutsch lernen <em>überall und jederzeit</em>.</span>
+    </h2>
+    <p class="lead">
+      <span class="lang-vi">Theo dõi chúng tôi trên mạng xã hội để nhận mẹo tiếng Đức miễn phí mỗi tuần, video ngữ pháp, và động lực để tiếp tục học.</span>
+      <span class="lang-de">Folge uns für kostenlose wöchentliche Deutschtipps, Grammatikvideos und Motivation um dranzubleiben.</span>
+    </p>
+    <div class="social-grid">
+      <a href="https://youtube.com/@dranbleiben" target="_blank" class="social-card yt">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+        <h4>YouTube</h4>
+        <p>
+          <span class="lang-vi">Video dài giải thích ngữ pháp, mẹo thi, cuộc sống ở Đức</span>
+          <span class="lang-de">Ausführliche Grammatikvideos, Prüfungstipps, Leben in Deutschland</span>
+        </p>
+        <span class="handle">@dranbleiben</span>
+      </a>
+      <a href="https://tiktok.com/@dranbleiben" target="_blank" class="social-card tt">
+        <svg viewBox="0 0 24 24"><path d="M19.6 3.3A4.5 4.5 0 0 1 15.2 0h-3.3v16.5a2.7 2.7 0 0 1-2.7 2.4 2.7 2.7 0 0 1-2.7-2.7 2.7 2.7 0 0 1 2.7-2.7c.26 0 .52.04.76.1V10.2a6 6 0 0 0-.76-.05A6 6 0 0 0 3.2 16.2 6 6 0 0 0 9.2 22.2a6 6 0 0 0 6-6V8.1a7.8 7.8 0 0 0 4.6 1.5V6.3a4.5 4.5 0 0 1-2.2-3z"/></svg>
+        <h4>TikTok</h4>
+        <p>
+          <span class="lang-vi">Video ngắn 60 giây – học tiếng Đức nhanh, vui, hiệu quả</span>
+          <span class="lang-de">60-Sekunden-Videos – schnell, unterhaltsam, wirksam</span>
+        </p>
+        <span class="handle">@dranbleiben</span>
+      </a>
+      <a href="https://instagram.com/dranbleiben" target="_blank" class="social-card ig">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.2 4.8 1.7 5 5 .1 1.3.1 1.6.1 4.9s0 3.6-.1 4.9c-.2 3.3-1.7 4.8-5 5-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.2-4.8-1.7-5-5C2 16.6 2 16.3 2 13s0-3.6.1-4.9c.2-3.3 1.7-4.8 5-5C8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.0 8.3 0 8.7 0 12s0 3.7.1 4.9C.3 21.3 2.7 23.7 7.1 23.9c1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
+        <h4>Instagram</h4>
+        <p>
+          <span class="lang-vi">Mẹo hàng ngày, câu hỏi tương tác, Stories về cuộc sống Đức-Việt</span>
+          <span class="lang-de">Tägliche Tipps, interaktive Fragen, Stories über das deutsch-vietnamesische Leben</span>
+        </p>
+        <span class="handle">@dranbleiben</span>
+      </a>
+      <a href="https://facebook.com/dranbleiben" target="_blank" class="social-card fb">
+        <svg viewBox="0 0 24 24"><path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1C0 18.1 4.4 23 10.1 24v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3H15.8c-1.5 0-2 .9-2 1.9v2.3h3.3l-.5 3.5h-2.8V24C19.6 23 24 18.1 24 12.1z"/></svg>
+        <h4>Facebook</h4>
+        <p>
+          <span class="lang-vi">Cộng đồng người Việt học tiếng Đức – hỏi đáp, chia sẻ, hỗ trợ nhau</span>
+          <span class="lang-de">Community für Vietnamesen die Deutsch lernen – Fragen, Tipps, gegenseitige Unterstützung</span>
+        </p>
+        <span class="handle">DRANBLEIBEN</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PREISE / GIÁ -->
+<section class="preise" id="preise">
+  <div class="container">
+    <p class="section-label">
+      <span class="lang-vi">Khóa học & Giá cả</span>
+      <span class="lang-de">Kurse & Preise</span>
+    </p>
+    <h2>
+      <span class="lang-vi">Chọn <em>con đường của bạn</em>.</span>
+      <span class="lang-de">Wähle deinen <em>Weg</em>.</span>
+    </h2>
+    <div class="preise-intro">
+      <p>
+        <span class="lang-vi">Thành thật mà nói: học tiếng Đức tốn thời gian. Thường nhiều hơn bạn nghĩ. Nhiều học viên đến với tôi sau nhiều tháng học ở chỗ khác và cảm thấy thất vọng.</span>
+        <span class="lang-de">Ehrlich gesagt: Deutsch lernen kostet Zeit. Oft mehr als man denkt. Manche Schüler kommen nach Monaten mit anderen Kursen zu mir – frustriert.</span>
+      </p>
+      <p>
+        <span class="lang-vi">Vấn đề hiếm khi là thiếu chăm chỉ. Mà là thiếu cấu trúc, thiếu sự liên tục, thiếu hỗ trợ đúng lúc khó khăn nhất. DRANBLEIBEN ra đời vì điều đó.</span>
+        <span class="lang-de">Das Problem war selten fehlender Fleiß. Es war fehlende Struktur und Unterstützung genau dann wenn es schwer wurde. Dafür ist DRANBLEIBEN da.</span>
+      </p>
+    </div>
+
+    <!-- ── TAB-NAVIGATION ── -->
+    <div class="kurs-tabs" id="kurs-tabs">
+      <button class="kurs-tab active" onclick="showKurs('probe')">
+        <span class="lang-vi">🎁 Học thử MIỄN PHÍ</span>
+        <span class="lang-de">🎁 Probestunde GRATIS</span>
+      </button>
+      <button class="kurs-tab" onclick="showKurs('a1b1')">A1 → B1</button>
+      <button class="kurs-tab" onclick="showKurs('b2')">
+        <span class="lang-vi">🏥 Tập trung B2 (Điều dưỡng)</span>
+        <span class="lang-de">🏥 Fokus B2 (Pflege)</span>
+      </button>
+      <button class="kurs-tab" onclick="showKurs('pruef')">
+        <span class="lang-vi">📋 Luyện thi</span>
+        <span class="lang-de">📋 Prüfungsvorbereitung</span>
+      </button>
+    </div>
+
+    <!-- ── PANEL 1: PROBESTUNDE ── -->
+    <div class="kurs-panel active" id="panel-probe">
+      <div class="kurs-card">
+        <div class="kurs-card-header">
+          <h3><span class="lang-vi">Học thử miễn phí</span><span class="lang-de">Kostenlose Probestunde</span></h3>
+          <p><span class="lang-vi">Thử trước – quyết định sau. Không rủi ro.</span><span class="lang-de">Erst testen – dann entscheiden. Kein Risiko.</span></p>
+        </div>
+        <div class="kurs-card-body">
+          <div class="kurs-detail-liste">
+            <div class="kd-item"><span class="kd-icon">📊</span><div class="kd-text"><span class="kd-label">Niveau</span><span class="kd-value">A1 – C1</span></div></div>
+            <div class="kd-item"><span class="kd-icon">⏱️</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Thời lượng</span><span class="lang-de">Dauer</span></span><span class="kd-value">60 <span class="lang-vi">phút</span><span class="lang-de">Minuten</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">👤</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Hình thức</span><span class="lang-de">Format</span></span><span class="kd-value"><span class="lang-vi">1 kèm 1, online</span><span class="lang-de">Einzelunterricht, online</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">📅</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Bắt đầu</span><span class="lang-de">Beginn</span></span><span class="kd-value"><span class="lang-vi">Linh hoạt</span><span class="lang-de">Flexibel</span></span></div></div>
+          </div>
+          <div class="kurs-detail-liste">
+            <div class="kd-item"><span class="kd-icon">✅</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Bao gồm</span><span class="lang-de">Inklusive</span></span><span class="kd-value"><span class="lang-vi">Đánh giá trình độ cá nhân</span><span class="lang-de">Persönliches Einstufungsgespräch</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">✅</span><div class="kd-text"><span class="kd-label"> </span><span class="kd-value"><span class="lang-vi">Tư vấn khóa học phù hợp</span><span class="lang-de">Individuelle Kursempfehlung</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">✅</span><div class="kd-text"><span class="kd-label"> </span><span class="kd-value"><span class="lang-vi">Giải thích bằng tiếng Việt khi cần</span><span class="lang-de">Erklärung auf Vietnamesisch wenn nötig</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">🔒</span><div class="kd-text"><span class="kd-label"> </span><span class="kd-value"><span class="lang-vi">Không cam kết, không áp lực</span><span class="lang-de">Keine Verpflichtung</span></span></div></div>
+          </div>
+        </div>
+        <div class="kurs-card-footer">
+          <div class="kurs-preis-block">
+            <span class="kurs-preis-label"><span class="lang-vi">Học phí</span><span class="lang-de">Preis</span></span>
+            <span class="kurs-preis-zahl" style="color:var(--rot);">GRATIS</span>
+            <p class="kurs-inkl"><span class="lang-vi">Hoàn toàn miễn phí</span><span class="lang-de">Komplett kostenlos</span></p>
+          </div>
+          <a href="https://wa.me/4915207995082" target="_blank" class="btn-primary" style="padding:0.85rem 1.75rem; font-size:0.9rem;">
+            <span class="lang-vi">Đặt lịch qua WhatsApp</span>
+            <span class="lang-de">Via WhatsApp buchen</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PANEL 2: A1-B1 ── -->
+    <div class="kurs-panel" id="panel-a1b1">
+      <div class="kurs-card">
+        <div class="kurs-card-header">
+          <h3>A1 → B1 <span style="font-weight:400; font-size:1rem; opacity:0.7;">· <span class="lang-vi">Khóa Nền Tảng</span><span class="lang-de">Grundlagenkurs</span></span></h3>
+          <p><span class="lang-vi">Từ người mới bắt đầu đến giao tiếp tự tin trong cuộc sống tại Đức.</span><span class="lang-de">Vom Anfänger zur sicheren Kommunikation im deutschen Alltag.</span></p>
+        </div>
+        <div class="kurs-card-body">
+          <div class="kurs-detail-liste">
+            <div class="kd-item"><span class="kd-icon">📊</span><div class="kd-text"><span class="kd-label">Niveau</span><span class="kd-value">A1 – B1</span></div></div>
+            <div class="kd-item"><span class="kd-icon">📅</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Bắt đầu</span><span class="lang-de">Beginn</span></span><span class="kd-value"><span class="lang-vi">Mỗi tháng một lần</span><span class="lang-de">Monatlich</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">🕐</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Thời lượng</span><span class="lang-de">Dauer</span></span><span class="kd-value">12 <span class="lang-vi">tuần</span><span class="lang-de">Wochen</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">📆</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Lịch học</span><span class="lang-de">Termine</span></span><span class="kd-value">2× <span class="lang-vi">mỗi tuần</span><span class="lang-de">pro Woche</span>, <span class="lang-vi">buổi tối</span><span class="lang-de">abends</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">⏱️</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Mỗi buổi</span><span class="lang-de">Je Einheit</span></span><span class="kd-value">90 <span class="lang-vi">phút</span><span class="lang-de">Minuten</span></span></div></div>
+          </div>
+          <div class="kurs-detail-liste">
+            <div class="kd-item"><span class="kd-icon">📚</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Tổng số buổi</span><span class="lang-de">Umfang gesamt</span></span><span class="kd-value">24 <span class="lang-vi">buổi đôi</span><span class="lang-de">Doppelstunden</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">👥</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Học viên</span><span class="lang-de">Teilnehmende</span></span><span class="kd-value"><span class="lang-vi">Tối đa 6 người</span><span class="lang-de">max. 6 Personen</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">💻</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Hình thức</span><span class="lang-de">Format</span></span><span class="kd-value">100% Online · Zoom</span></div></div>
+            <div class="kd-item"><span class="kd-icon">🗣️</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Hỗ trợ</span><span class="lang-de">Support</span></span><span class="kd-value"><span class="lang-vi">Giải thích tiếng Việt</span><span class="lang-de">Erklärung auf Vietnamesisch</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">📱</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Cộng đồng</span><span class="lang-de">Community</span></span><span class="kd-value">WhatsApp-Gruppe</span></div></div>
+          </div>
+        </div>
+        <div class="kurs-card-footer">
+          <div class="kurs-preis-block">
+            <span class="kurs-preis-label"><span class="lang-vi">Học phí / người</span><span class="lang-de">Preis pro Person</span></span>
+            <span class="kurs-preis-zahl">25 €<small> / <span class="lang-vi">buổi đôi</span><span class="lang-de">Doppelstunde</span></small></span>
+            <p class="kurs-inkl">= 600 € <span class="lang-vi">cho toàn khóa · tiết kiệm so với 1-1</span><span class="lang-de">für den Gesamtkurs · günstiger als 1:1</span></p>
+          </div>
+          <a href="https://wa.me/4915207995082" target="_blank" class="btn-primary" style="padding:0.85rem 1.75rem; font-size:0.9rem;">
+            <span class="lang-vi">Đăng ký ngay</span>
+            <span class="lang-de">Jetzt anmelden</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PANEL 3: B2 PFLEGE ── -->
+    <div class="kurs-panel" id="panel-b2">
+      <div class="kurs-card">
+        <div class="kurs-card-header" style="background: #8B1A0A;">
+          <h3>🏥 <span class="lang-vi">Tập trung B2 – Dành cho Điều dưỡng</span><span class="lang-de">Fokus B2 – Für Pflegekräfte</span></h3>
+          <p><span class="lang-vi">Con đường ngắn nhất đến B2 và công nhận bằng cấp điều dưỡng tại Đức.</span><span class="lang-de">Der kürzeste Weg zu B2 und der Pflegeanerkennung in Deutschland.</span></p>
+        </div>
+        <div class="kurs-card-body">
+          <div class="kurs-detail-liste">
+            <div class="kd-item"><span class="kd-icon">📊</span><div class="kd-text"><span class="kd-label">Niveau</span><span class="kd-value">B1 → B2</span></div></div>
+            <div class="kd-item"><span class="kd-icon">📅</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Bắt đầu</span><span class="lang-de">Beginn</span></span><span class="kd-value"><span class="lang-vi">Mỗi tháng một lần</span><span class="lang-de">Monatlich</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">🕐</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Thời lượng</span><span class="lang-de">Dauer</span></span><span class="kd-value">12 <span class="lang-vi">tuần</span><span class="lang-de">Wochen</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">📆</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Lịch học</span><span class="lang-de">Termine</span></span><span class="kd-value">2× <span class="lang-vi">mỗi tuần</span><span class="lang-de">pro Woche</span>, <span class="lang-vi">buổi tối</span><span class="lang-de">abends</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">⏱️</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Mỗi buổi</span><span class="lang-de">Je Einheit</span></span><span class="kd-value">90 <span class="lang-vi">phút</span><span class="lang-de">Minuten</span></span></div></div>
+          </div>
+          <div class="kurs-detail-liste">
+            <div class="kd-item"><span class="kd-icon">📚</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Tổng số buổi</span><span class="lang-de">Umfang gesamt</span></span><span class="kd-value">24 <span class="lang-vi">buổi đôi</span><span class="lang-de">Doppelstunden</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">👥</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Học viên</span><span class="lang-de">Teilnehmende</span></span><span class="kd-value"><span class="lang-vi">Tối đa 6 người</span><span class="lang-de">max. 6 Personen</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">🏥</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Trọng tâm</span><span class="lang-de">Schwerpunkt</span></span><span class="kd-value"><span class="lang-vi">Tiếng Đức trong điều dưỡng + thi B2</span><span class="lang-de">Pflegedeutsch + B2-Prüfung</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">💻</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Hình thức</span><span class="lang-de">Format</span></span><span class="kd-value">100% Online · Zoom</span></div></div>
+            <div class="kd-item"><span class="kd-icon">📄</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Tài liệu</span><span class="lang-de">Materialien</span></span><span class="kd-value"><span class="lang-vi">Tài liệu B2 chuyên ngành y tế</span><span class="lang-de">B2-Materialien Medizin/Pflege</span></span></div></div>
+          </div>
+        </div>
+        <div class="kurs-card-footer">
+          <div class="kurs-preis-block">
+            <span class="kurs-preis-label"><span class="lang-vi">Học phí / người</span><span class="lang-de">Preis pro Person</span></span>
+            <span class="kurs-preis-zahl">25 €<small> / <span class="lang-vi">buổi đôi</span><span class="lang-de">Doppelstunde</span></small></span>
+            <p class="kurs-inkl">= 600 € <span class="lang-vi">cho toàn khóa · thường được cơ sở y tế thanh toán</span><span class="lang-de">für den Gesamtkurs · oft vom Arbeitgeber übernommen</span></p>
+          </div>
+          <a href="https://wa.me/4915207995082" target="_blank" class="btn-primary" style="padding:0.85rem 1.75rem; font-size:0.9rem; background:#8B1A0A;">
+            <span class="lang-vi">Đăng ký ngay</span>
+            <span class="lang-de">Jetzt anmelden</span>
+          </a>
+        </div>
+      </div>
+      <div class="goethe-box">
+        <div class="g-icon">💡</div>
+        <div>
+          <h4><span class="lang-vi">Đã học tại Goethe-Institut ở Việt Nam?</span><span class="lang-de">Beim Goethe-Institut in Vietnam gelernt?</span></h4>
+          <p><span class="lang-vi">Tuyệt vời! Goethe-Institut chuẩn bị cho bạn trước khi đến Đức. DRANBLEIBEN đồng hành cùng bạn <strong>sau khi đến</strong> – áp dụng tiếng Đức vào cuộc sống thực, công việc điều dưỡng và kỳ thi B2.</span><span class="lang-de">Gut gemacht! Das Goethe-Institut bereitet dich <strong>vor</strong> der Ausreise vor. DRANBLEIBEN begleitet dich <strong>nach der Ankunft</strong> – Deutsch im echten Alltag, in der Pflege und für die B2-Prüfung.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PANEL 4: PRÜFUNGSVORBEREITUNG ── -->
+    <div class="kurs-panel" id="panel-pruef">
+      <div class="kurs-card">
+        <div class="kurs-card-header" style="background: #1A3A5C;">
+          <h3>📋 <span class="lang-vi">Luyện thi – Goethe / telc / ÖSD</span><span class="lang-de">Prüfungsvorbereitung – Goethe / telc / ÖSD</span></h3>
+          <p><span class="lang-vi">Chuẩn bị tối ưu cho kỳ thi – đỗ ngay lần đầu.</span><span class="lang-de">Optimale Prüfungsvorbereitung – beim ersten Versuch bestehen.</span></p>
+        </div>
+        <div class="kurs-card-body">
+          <div class="kurs-detail-liste">
+            <div class="kd-item"><span class="kd-icon">📊</span><div class="kd-text"><span class="kd-label">Niveau</span><span class="kd-value">B1 / B2 / C1</span></div></div>
+            <div class="kd-item"><span class="kd-icon">📅</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Bắt đầu</span><span class="lang-de">Beginn</span></span><span class="kd-value"><span class="lang-vi">Linh hoạt theo lịch thi</span><span class="lang-de">Flexibel nach Prüfungstermin</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">🕐</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Thời lượng</span><span class="lang-de">Dauer</span></span><span class="kd-value">8–12 <span class="lang-vi">tuần</span><span class="lang-de">Wochen</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">📆</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Lịch học</span><span class="lang-de">Termine</span></span><span class="kd-value">2× <span class="lang-vi">mỗi tuần</span><span class="lang-de">pro Woche</span>, <span class="lang-vi">buổi tối</span><span class="lang-de">abends</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">⏱️</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Mỗi buổi</span><span class="lang-de">Je Einheit</span></span><span class="kd-value">90 <span class="lang-vi">phút</span><span class="lang-de">Minuten</span></span></div></div>
+          </div>
+          <div class="kurs-detail-liste">
+            <div class="kd-item"><span class="kd-icon">📚</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Tổng số buổi</span><span class="lang-de">Umfang gesamt</span></span><span class="kd-value">16–24 <span class="lang-vi">buổi đôi</span><span class="lang-de">Doppelstunden</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">👥</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Học viên</span><span class="lang-de">Teilnehmende</span></span><span class="kd-value"><span class="lang-vi">Tối đa 6 người</span><span class="lang-de">max. 6 Personen</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">🎯</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Trọng tâm</span><span class="lang-de">Schwerpunkt</span></span><span class="kd-value"><span class="lang-vi">Nghe, Đọc, Viết, Nói</span><span class="lang-de">Hören, Lesen, Schreiben, Sprechen</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">📝</span><div class="kd-text"><span class="kd-label"><span class="lang-vi">Mô phỏng thi</span><span class="lang-de">Prüfungssimulation</span></span><span class="kd-value"><span class="lang-vi">2 lần, có nhận xét chi tiết</span><span class="lang-de">2×, mit detailliertem Feedback</span></span></div></div>
+            <div class="kd-item"><span class="kd-icon">💻</span><div class="kd-text"><span class="kd-label">Format</span><span class="kd-value">100% Online · Zoom</span></div></div>
+          </div>
+        </div>
+        <div class="kurs-card-footer">
+          <div class="kurs-preis-block">
+            <span class="kurs-preis-label"><span class="lang-vi">Học phí / người</span><span class="lang-de">Preis pro Person</span></span>
+            <span class="kurs-preis-zahl">25 €<small> / <span class="lang-vi">buổi đôi</span><span class="lang-de">Doppelstunde</span></small></span>
+            <p class="kurs-inkl"><span class="lang-vi">Tổng: 400–600 € tùy lịch thi</span><span class="lang-de">Gesamt: 400–600 € je nach Prüfungstermin</span></p>
+          </div>
+          <a href="https://wa.me/4915207995082" target="_blank" class="btn-primary" style="padding:0.85rem 1.75rem; font-size:0.9rem; background:#1A3A5C;">
+            <span class="lang-vi">Đăng ký ngay</span>
+            <span class="lang-de">Jetzt anmelden</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- EINZELUNTERRICHT-HINWEIS -->
+    <div style="margin-top:2rem; padding:1.25rem 1.5rem; background:var(--weiss); border-radius:8px; border-left:4px solid var(--rot); display:flex; gap:1rem; align-items:flex-start;">
+      <span style="font-size:1.4rem;">👤</span>
+      <div>
+        <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.9rem; color:var(--dunkel); margin-bottom:0.3rem;">
+          <span class="lang-vi">Muốn học 1 kèm 1?</span>
+          <span class="lang-de">Lieber Einzelunterricht?</span>
+        </p>
+        <p style="font-size:0.85rem; color:var(--grau);">
+          <span class="lang-vi">Tôi cũng dạy cá nhân 1 kèm 1 với giá 64 €/buổi đôi (90 phút). Linh hoạt hoàn toàn về lịch học. Liên hệ qua WhatsApp để biết thêm.</span>
+          <span class="lang-de">Ich biete auch 1:1-Einzelunterricht für 64 €/Doppelstunde (90 Min.) an. Völlig flexibel. Kontaktiere mich via WhatsApp.</span>
+          <a href="https://wa.me/4915207995082" target="_blank" style="color:var(--rot); font-weight:700; margin-left:0.5rem;">→ WhatsApp</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SEKTION -->
+<section class="video-section" id="video">
+  <div class="container">
+    <p class="section-label">
+      <span class="lang-vi">Xem video giới thiệu</span>
+      <span class="lang-de">Einführungsvideo</span>
+    </p>
+    <h2>
+      <span class="lang-vi">Hiểu rõ hơn về <em>DRANBLEIBEN</em></span>
+      <span class="lang-de">DRANBLEIBEN besser <em>kennenlernen</em></span>
+    </h2>
+    <p class="lead">
+      <span class="lang-vi">Xem video để hiểu phương pháp dạy của thầy Peter, tại sao tiếng Đức cho người Việt cần một cách tiếp cận khác – và tại sao DRANBLEIBEN khác biệt.</span>
+      <span class="lang-de">Schau dir das Video an um Peters Unterrichtsmethode zu verstehen, warum Deutsch für Vietnamesen einen anderen Ansatz braucht – und was DRANBLEIBEN besonders macht.</span>
+    </p>
+
+    <div class="video-wrapper" id="video-wrapper">
+      <!-- 
+        ANLEITUNG: Wenn dein YouTube-Video fertig ist:
+        1. Ersetze den gesamten <div class="video-placeholder">...</div> Block
+        2. Füge stattdessen ein:
+           <iframe src="https://www.youtube.com/embed/DEIN-VIDEO-ID" 
+                   allowfullscreen allow="autoplay"></iframe>
+        Beispiel Video-ID: Bei https://youtu.be/abc123xyz → ID = abc123xyz
+      -->
+      <div class="video-placeholder" onclick="this.innerHTML='<div style=&quot;padding:2rem;color:rgba(255,255,255,0.5);text-align:center;&quot;>Video wird bald verfügbar sein!</div>'">
+        <span class="video-coming-soon">
+          <span class="lang-vi">Sắp ra mắt</span>
+          <span class="lang-de">Demnächst verfügbar</span>
+        </span>
+        <div class="video-play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <h3>
+          <span class="lang-vi">Video giới thiệu DRANBLEIBEN</span>
+          <span class="lang-de">DRANBLEIBEN Vorstellungsvideo</span>
+        </h3>
+        <p>
+          <span class="lang-vi">Thầy Peter – Deutsch für Vietnamesen · Bắt đầu 09/2026</span>
+          <span class="lang-de">Peter Hiển Nguyễn · Deutschkurse für Vietnamesen · Start 09/2026</span>
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top:1.5rem; text-align:center;">
+      <a href="https://youtube.com/@dranbleiben" target="_blank"
+        style="display:inline-flex; align-items:center; gap:0.5rem; color:rgba(255,255,255,0.5); font-size:0.82rem; font-family:'Montserrat',sans-serif; font-weight:700; text-decoration:none; letter-spacing:0.06em; transition:color 0.2s;">
+        <svg width="16" height="16" fill="#FF0000" viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+        <span class="lang-vi">Theo dõi kênh YouTube @dranbleiben</span>
+        <span class="lang-de">YouTube-Kanal @dranbleiben abonnieren</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <p class="section-label">
+      <span class="lang-vi">Câu hỏi thường gặp</span>
+      <span class="lang-de">Häufige Fragen</span>
+    </p>
+    <h2>
+      <span class="lang-vi"><em>Câu trả lời</em> thật thà.</span>
+      <span class="lang-de">Ehrliche <em>Antworten</em>.</span>
+    </h2>
+    <div class="faq-liste">
+
+      <div class="faq-item">
+        <button class="faq-frage">
+          <span class="lang-vi">Tôi có thể bắt đầu từ trình độ nào?</span>
+          <span class="lang-de">Auf welchem Niveau kann ich anfangen?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-antwort">
+          <span class="lang-vi">A1 đến C1. Dù bạn mới bắt đầu học tiếng Đức hay đang chuẩn bị thi B2, chúng ta bắt đầu đúng từ chỗ bạn đang đứng. Không có ngoại lệ, không có trình độ tối thiểu.</span>
+          <span class="lang-de">A1 bis C1. Egal ob du gerade erst beginnst oder dich auf B2 vorbereitest. Wir starten genau dort wo du stehst – keine Ausnahme, kein Mindestlevel.</span>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-frage">
+          <span class="lang-vi">Tôi có thể hỏi bằng tiếng Việt không?</span>
+          <span class="lang-de">Kann ich auch auf Vietnamesisch fragen?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-antwort">
+          <span class="lang-vi">Có. Tôi nói tiếng Việt. Nếu bạn không hiểu điều gì đó bằng tiếng Đức, chúng ta có thể giải thích nhanh bằng tiếng Việt. Đó không phải dấu hiệu yếu kém – đó là cách học thông minh.</span>
+          <span class="lang-de">Ja. Ich spreche Vietnamesisch. Wenn du etwas nicht verstehst, können wir es kurz auf Vietnamesisch klären. Das ist kein Zeichen von Schwäche – das ist smarter Spracherwerb.</span>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-frage">
+          <span class="lang-vi">Lớp học diễn ra như thế nào về mặt kỹ thuật?</span>
+          <span class="lang-de">Wie läuft der Unterricht technisch ab?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-antwort">
+          <span class="lang-vi">Tất cả online qua Zoom. Bạn chỉ cần máy tính hoặc điện thoại thông minh và kết nối internet ổn định. Tôi sẽ gửi hướng dẫn ngắn trước buổi học đầu tiên nếu bạn chưa dùng Zoom bao giờ.</span>
+          <span class="lang-de">Alles online via Zoom. Du brauchst nur einen Computer oder ein Smartphone und eine stabile Internetverbindung. Ich schicke eine kurze Anleitung falls du Zoom noch nie benutzt hast.</span>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-frage">
+          <span class="lang-vi">Nếu tôi lỡ một buổi học thì sao?</span>
+          <span class="lang-de">Was wenn ich eine Stunde verpasse?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-antwort">
+          <span class="lang-vi">Cuộc sống xảy ra. Các buổi học bị hủy có thể dời lịch miễn phí trước 24 giờ. Trong vòng 24 giờ thì buổi học được tính là đã dùng – trừ trường hợp khẩn cấp có bằng chứng.</span>
+          <span class="lang-de">Das Leben passiert. Abgesagte Stunden können bis 24 Stunden vorher kostenlos verschoben werden. Innerhalb von 24 Stunden gilt die Stunde als verbraucht – außer bei nachgewiesenen Notfällen.</span>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-frage">
+          <span class="lang-vi">Công ty / bệnh viện có thể trả tiền học phí không?</span>
+          <span class="lang-de">Kann mein Arbeitgeber die Kosten übernehmen?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-antwort">
+          <span class="lang-vi">Rất thường xuyên là có. Nhiều cơ sở điều dưỡng và công ty chi trả chi phí khóa học ngôn ngữ cho nhân viên. Tôi sẵn sàng xuất hóa đơn chính thức. Hãy hỏi bộ phận nhân sự của bạn.</span>
+          <span class="lang-de">Sehr oft ja. Viele Pflegeeinrichtungen und Unternehmen übernehmen Sprachkurskosten. Ich stelle gerne eine formelle Rechnung aus. Sprich einfach mit deiner Personalabteilung.</span>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-frage">
+          <span class="lang-vi">Có bảo đảm gì không?</span>
+          <span class="lang-de">Gibt es eine Garantie?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-antwort">
+          <span class="lang-vi">Không có bảo đảm tiền. Nhưng có bảo đảm thái độ: tôi không bỏ cuộc. Nếu sau 4 buổi học bạn không cảm nhận được tiến bộ, chúng ta cùng bàn xem phải làm khác đi như thế nào.</span>
+          <span class="lang-de">Keine Geldgarantie. Aber eine Haltungsgarantie: Ich gebe nicht auf. Wenn der Fortschritt nach 4 Stunden nicht spürbar ist, besprechen wir gemeinsam was wir anders machen.</span>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-frage">
+          <span class="lang-vi">Tôi thanh toán như thế nào?</span>
+          <span class="lang-de">Wie zahle ich?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-antwort">
+          <span class="lang-vi">PayPal hoặc chuyển khoản ngân hàng. Các gói học được thanh toán đầy đủ trước khi bắt đầu. Gói Durchstarter có thể trả góp 2 lần nếu có yêu cầu.</span>
+          <span class="lang-de">PayPal oder Banküberweisung. Pakete werden vor Kursbeginn vollständig bezahlt. Für das Durchstarter-Paket ist auf Anfrage Ratenzahlung möglich (2 Raten).</span>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-frage">
+          <span class="lang-vi">Tại sao không học tại Goethe-Institut?</span>
+          <span class="lang-de">Warum nicht einfach das Goethe-Institut?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-antwort">
+          <span class="lang-vi">Goethe-Institut rất tốt – đặc biệt để chuẩn bị <strong>trước khi rời Việt Nam</strong>. DRANBLEIBEN dành cho bạn <strong>khi đã ở Đức</strong>: thầy Peter nói tiếng Việt, hiểu cuộc sống hàng ngày của bạn, dạy tiếng Đức gắn với thực tế công việc và giải thích đúng những điểm khó cho người Việt. Không phải thay thế – mà là bước tiếp theo.</span>
+          <span class="lang-de">Das Goethe-Institut ist exzellent – besonders für die Vorbereitung <strong>vor der Ausreise</strong> aus Vietnam. DRANBLEIBEN ist für dich <strong>nach der Ankunft in Deutschland</strong>: Peter spricht Vietnamesisch, kennt deinen Alltag, unterrichtet praxisnah und erklärt genau die Punkte die für Vietnamesen schwer sind. Kein Ersatz – sondern der nächste Schritt.</span>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ABSCHLUSS / KONTAKT -->
+<section class="abschluss" id="kontakt">
+  <div class="container">
+    <p class="mantra">
+      <span class="lang-vi">Tiếng Đức của bạn đang lớn lên. Kiên trì nhé.</span>
+      <span class="lang-de">Dein Deutsch wächst. Bleib dran.</span>
+    </p>
+    <h2>
+      <span class="lang-vi">Còn do dự?<br>Một buổi thử là đủ.</span>
+      <span class="lang-de">Noch unsicher?<br>Eine Probestunde reicht.</span>
+    </h2>
+    <p class="desc">
+      <span class="lang-vi">Thời điểm để bắt đầu là bây giờ. Không phải khi bạn có nhiều thời gian hơn. Không phải khi bạn "sẵn sàng". Bây giờ.</span>
+      <span class="lang-de">Der Moment zum Anfangen ist jetzt. Nicht wenn du mehr Zeit hast. Nicht wenn du "bereit" bist. Jetzt.</span>
+    </p>
+    <span class="probe-price-highlight" style="background:#25D366; color:#fff;">
+      <span class="lang-vi">HỌC THỬ MIỄN PHÍ</span>
+      <span class="lang-de">PROBESTUNDE KOSTENLOS</span>
+    </span><br>
+    <div class="kontakt-buttons">
+      <a href="https://wa.me/4915207995082" target="_blank" class="btn-kontakt btn-wa">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741 1.013 1.017-3.773-.236-.374A9.86 9.86 0 0 1 2.1 12c0-5.464 4.436-9.9 9.9-9.9 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.464-4.437 9.9-9.9 9.9z"/></svg>
+        <span class="lang-vi">Nhắn WhatsApp</span>
+        <span class="lang-de">WhatsApp</span>
+      </a>
+      <a href="https://zalo.me/4915207995082" target="_blank" class="btn-kontakt btn-zalo">
+        <svg width="20" height="20" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="#0068FF"/><text x="5" y="28" font-family="Arial" font-weight="900" font-size="18" fill="white">Za</text><text x="21" y="28" font-family="Arial" font-weight="900" font-size="18" fill="#00CFFF">lo</text></svg>
+        <span class="lang-vi">Nhắn Zalo</span>
+        <span class="lang-de">Zalo</span>
+      </a>
+    </div>
+    <p style="margin-top:1rem; font-size:0.82rem; color:rgba(255,255,255,0.4);">
+      <span class="lang-vi">Hoặc nhắn tin trực tiếp: </span>
+      <span class="lang-de">Oder direkt schreiben: </span>
+      <a href="https://wa.me/4915207995082" target="_blank" style="color:rgba(255,255,255,0.55);">+49 152 079 950 82</a>
+    </p>
+    <p style="margin-top:0.4rem; font-size:0.75rem; color:rgba(255,255,255,0.25);">
+      <span class="lang-de">E-Mail folgt in Kürze · kontakt@dranbleiben.de</span>
+      <span class="lang-vi">Email sẽ sớm có · kontakt@dranbleiben.de</span>
+    </p>
+
+    <!-- ANMELDEFORMULAR direkt unter Kontakt-Buttons -->
+    <div style="margin-top:2.5rem; max-width:460px; margin-left:auto; margin-right:auto; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.14); border-radius:14px; padding:2rem; text-align:left;">
+      <h3 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; color:#fff; margin-bottom:1.25rem; text-align:center;">
+        <span class="lang-vi">📋 Hoặc để lại thông tin – thầy sẽ liên hệ lại</span>
+        <span class="lang-de">📋 Oder hinterlasse deine Daten – ich melde mich</span>
+      </h3>
+      <div style="display:flex; flex-direction:column; gap:0.75rem;" id="main-form">
+        <input id="mf-name" type="text" placeholder="Tên / Name *"
+          style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); border-radius:8px; padding:0.8rem 1rem; color:#fff; font-family:'Lato',sans-serif; font-size:0.92rem; outline:none; width:100%;" />
+        <input id="mf-phone" type="tel" placeholder="WhatsApp / Zalo *"
+          style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); border-radius:8px; padding:0.8rem 1rem; color:#fff; font-family:'Lato',sans-serif; font-size:0.92rem; outline:none; width:100%;" />
+        <select id="mf-niveau"
+          style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); border-radius:8px; padding:0.8rem 1rem; color:#fff; font-family:'Lato',sans-serif; font-size:0.92rem; outline:none; width:100%;">
+          <option value="" style="color:#333;">
+            Trình độ / Niveau *
+          </option>
+          <option style="color:#333;">A1 – Anfänger / Người mới bắt đầu</option>
+          <option style="color:#333;">A2</option>
+          <option style="color:#333;">B1</option>
+          <option style="color:#333;">B2 – Pflegeanerkennung</option>
+          <option style="color:#333;">C1 / C2</option>
+          <option style="color:#333;">Chưa biết / Weiß ich nicht</option>
+        </select>
+        <button onclick="submitMainForm()"
+          style="background:#C8401A; color:#fff; border:none; border-radius:8px; padding:0.9rem; font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.95rem; cursor:pointer; width:100%; transition:background 0.2s;">
+          <span class="lang-vi">✅ Đăng ký học thử miễn phí</span>
+          <span class="lang-de">✅ Kostenlose Probestunde anmelden</span>
+        </button>
+      </div>
+      <div id="main-form-success" style="display:none; text-align:center; color:#25D366; font-weight:700; padding:1.25rem; font-size:1rem; line-height:1.7;">
+        🎉
+        <span class="lang-vi">Cảm ơn! Thầy Peter sẽ liên hệ bạn qua WhatsApp sớm nhé.</span>
+        <span class="lang-de">Danke! Peter meldet sich bald bei dir über WhatsApp.</span>
+      </div>
+      <p style="font-size:0.72rem; color:rgba(255,255,255,0.3); text-align:center; margin-top:0.75rem; line-height:1.5;">
+        <span class="lang-vi">Thông tin của bạn được bảo mật và chỉ dùng để liên hệ tư vấn.</span>
+        <span class="lang-de">Deine Daten werden vertraulich behandelt und nur zur Kursanmeldung genutzt.</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="dranbleiben-rechtliches.html">Impressum</a>
+      <a href="dranbleiben-rechtliches.html" onclick="localStorage.setItem('db-tab','datenschutz')">Datenschutz / Bảo mật</a>
+      <a href="dranbleiben-rechtliches.html#agb">AGB / Điều khoản</a>
+    </div>
+    <p class="footer-copy">© 2026 DRANBLEIBEN – Deutschkurse für Vietnamesen · Học tiếng Đức cho người Việt</p>
+  </div>
+</footer>
+
+<script>
+  // Sprachumschalter
+  function setLang(lang) {
+    document.body.classList.toggle('de', lang === 'de');
+    document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+    document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+    document.documentElement.lang = lang === 'de' ? 'de' : 'vi';
+    localStorage.setItem('db-lang', lang);
+  }
+  // Gespeicherte Sprache laden
+  const saved = localStorage.getItem('db-lang');
+  if (saved === 'de') setLang('de');
+
+
+
+  // ── Regelbasierter Bot ──────────────────────────────────────────────
+  function getBotReply(msg) {
+    const de = isDE();
+    const t = msg.toLowerCase();
+
+    // Preis
+    if (t.includes('preis') || t.includes('kost') || t.includes('€') || t.includes('giá') || t.includes('bao nhiêu') || t.includes('phí')) {
+      return de
+        ? 'Die Probestunde ist KOSTENLOS (60 Min.). Gruppenunterricht kostet 25 €/Doppelstunde pro Person (max. 6 Personen). Einzelunterricht 64 €/Doppelstunde. Für Details einfach WhatsApp schreiben!'
+        : 'Buổi học thử MIỄN PHÍ (60 phút). Học nhóm 25 €/buổi đôi/người (tối đa 6 người). Học 1 kèm 1: 64 €/buổi đôi. Nhắn WhatsApp để biết thêm!';
+    }
+    // Probestunde
+    if (t.includes('probestunde') || t.includes('probe') || t.includes('test') || t.includes('học thử') || t.includes('thử')) {
+      return de
+        ? 'Die Probestunde ist komplett kostenlos! Du kannst einfach via WhatsApp (+49 152 079 950 82) oder Zalo einen Termin vereinbaren. 60 Minuten, kein Druck, keine Verpflichtung.'
+        : 'Buổi học thử hoàn toàn miễn phí! Nhắn tin qua WhatsApp (+49 152 079 950 82) hoặc Zalo để đặt lịch. 60 phút, không áp lực, không cam kết.';
+    }
+    // Niveau / Trình độ
+    if (t.includes('niveau') || t.includes('level') || t.includes('a1') || t.includes('b1') || t.includes('b2') || t.includes('c1') || t.includes('trình độ') || t.includes('cấp độ')) {
+      return de
+        ? 'Ich unterrichte alle Niveaus von A1 bis C1. Besonders stark: B2-Vorbereitung für Pflegekräfte. Du weißt nicht wo du stehst? Die kostenlose Probestunde beinhaltet ein Einstufungsgespräch!'
+        : 'Thầy dạy tất cả các trình độ từ A1 đến C1. Đặc biệt mạnh: chuẩn bị B2 cho điều dưỡng viên. Chưa biết trình độ của mình? Buổi học thử miễn phí có bài kiểm tra trình độ!';
+    }
+    // Pflege / Điều dưỡng
+    if (t.includes('pflege') || t.includes('krankenhaus') || t.includes('klinik') || t.includes('anerkennung') || t.includes('điều dưỡng') || t.includes('y tá') || t.includes('bệnh viện')) {
+      return de
+        ? 'Super! Der B2-Fokuskurs für Pflegekräfte ist unser beliebtestes Angebot. 12 Wochen, 2× pro Woche abends, max. 6 Personen, 25 €/Doppelstunde. Oft übernimmt dein Arbeitgeber die Kosten! Frag einfach via WhatsApp.'
+        : 'Tuyệt! Khóa B2 cho điều dưỡng viên là khóa phổ biến nhất của chúng tôi. 12 tuần, 2 buổi/tuần buổi tối, tối đa 6 người, 25 €/buổi. Cơ sở y tế thường thanh toán cho bạn! Nhắn WhatsApp để hỏi thêm.';
+    }
+    // Kontakt / Liên hệ
+    if (t.includes('kontakt') || t.includes('whatsapp') || t.includes('zalo') || t.includes('email') || t.includes('liên hệ') || t.includes('nhắn') || t.includes('gọi')) {
+      return de
+        ? 'Du erreichst Peter direkt via WhatsApp oder Zalo: +49 152 079 950 82. Am schnellsten antwortet er abends nach 18 Uhr!'
+        : 'Bạn có thể liên hệ thầy Peter trực tiếp qua WhatsApp hoặc Zalo: +49 152 079 950 82. Thầy trả lời nhanh nhất vào buổi tối sau 18 giờ!';
+    }
+    // Peter / Lehrer
+    if (t.includes('peter') || t.includes('lehrer') || t.includes('wer') || t.includes('thầy') || t.includes('giáo viên') || t.includes('ai dạy')) {
+      return de
+        ? 'Peter Hiển Nguyễn – Muttersprache Vietnamesisch, Deutsch C2, Magister Theologiae (Note 1,5), ausgebildeter Gymnasiallehrer. Er unterrichtet Deutsch für Vietnamesen seit Jahren und versteht genau wo es schwer wird.'
+        : 'Thầy Peter Hiển Nguyễn – tiếng Việt là tiếng mẹ đẻ, tiếng Đức C2, Thạc sĩ Thần học (điểm 1,5), giáo viên Gymnasium chính thức. Thầy dạy tiếng Đức cho người Việt nhiều năm và hiểu rõ điểm khó của người Việt.';
+    }
+    // Goethe
+    if (t.includes('goethe') || t.includes('telc') || t.includes('ösd') || t.includes('zertifikat') || t.includes('chứng chỉ') || t.includes('bằng')) {
+      return de
+        ? 'Wir bereiten gezielt auf Goethe, telc und ÖSD vor (B1, B2, C1). Mit 2 Prüfungssimulationen und detailliertem Feedback. Viele unserer Schüler bestehen beim ersten Versuch!'
+        : 'Chúng tôi luyện thi Goethe, telc và ÖSD (B1, B2, C1). Có 2 buổi thi thử với nhận xét chi tiết. Nhiều học viên đỗ ngay lần đầu!';
+    }
+    // Standard-Antwort
+    return de
+      ? 'Gute Frage! Am besten schreib Peter direkt via WhatsApp (+49 152 079 950 82) – er antwortet persönlich und schnell. Oder buch einfach die kostenlose Probestunde!'
+      : 'Câu hỏi hay! Nhắn trực tiếp cho thầy Peter qua WhatsApp (+49 152 079 950 82) – thầy trả lời nhanh và trực tiếp. Hoặc đặt lịch học thử miễn phí nhé!';
+  }
+
+  // Hauptformular Submit
+  function submitMainForm() {
+    const name   = document.getElementById('mf-name').value.trim();
+    const phone  = document.getElementById('mf-phone').value.trim();
+    const niveau = document.getElementById('mf-niveau').value;
+    if (!name || !phone) {
+      alert(document.body.classList.contains('de')
+        ? 'Bitte Name und Nummer ausfüllen!'
+        : 'Vui lòng điền tên và số điện thoại!');
+      return;
+    }
+    const msg = encodeURIComponent(
+      "Xin chào thầy Peter! / Hallo Peter!\n" +
+      "Tên / Name: " + name + "\n" +
+      "Số điện thoại / Telefon: " + phone + "\n" +
+      "Trình độ / Niveau: " + (niveau || "Chưa biết / Unbekannt") + "\n" +
+      "=> Đăng ký học thử miễn phí / Kostenlose Probestunde anmelden"
+    );
+    window.open("https://wa.me/4915207995082?text=" + msg, "_blank");
+    document.getElementById('main-form').style.display = 'none';
+    document.getElementById('main-form-success').style.display = 'block';
+  }
+
+
+  // Kurs-Tabs
+  function showKurs(id) {
+    document.querySelectorAll('.kurs-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.kurs-tab').forEach(t => t.classList.remove('active'));
+    const panel = document.getElementById('panel-' + id);
+    if (panel) panel.classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-frage').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+
+<!-- CHAT WIDGET -->
+<div id="chat-widget">
+  <div id="chat-box">
+    <div class="chat-header">
+      <div class="chat-header-left">
+        <div class="chat-dot"></div>
+        <span>DRANBLEIBEN Assistent</span>
+      </div>
+      <button id="chat-close" onclick="toggleChat()">✕</button>
+    </div>
+    <div id="chat-messages">
+      <div class="msg msg-bot" id="welcome-msg"></div>
+    </div>
+    <div id="chat-input-row">
+      <input id="chat-input" type="text" placeholder="..." onkeydown="if(event.key==='Enter')sendMsg()"/>
+      <button id="chat-send" onclick="sendMsg()">➤</button>
+    </div>
+  </div>
+  <div id="chat-toggle-wrap">
+    <button id="chat-toggle" onclick="toggleChat()" title="Chat">
+      <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+    </button>
+    <div class="chat-badge" id="chat-badge">1</div>
+  </div>
+</div>
+
+<script>
+// ── Sprache erkennen ──────────────────────────────────────────────────
+function isDE() { return document.body.classList.contains('de'); }
+
+const WELCOME_VI = "Xin chào! 👋 Tôi là trợ lý của DRANBLEIBEN.
+Bạn có câu hỏi về khóa học tiếng Đức không? Tôi sẵn sàng giúp bạn!";
+const WELCOME_DE = "Hallo! 👋 Ich bin der Assistent von DRANBLEIBEN.
+Hast du Fragen zu den Deutschkursen? Ich helfe dir gerne!";
+
+const SYSTEM_PROMPT = `Du bist ein freundlicher, hilfreicher Assistent der Sprachschule DRANBLEIBEN – Deutschkurse für Vietnamesen.
+
+Wichtige Infos:
+- Lehrer: Peter Hiển Nguyễn, Muttersprache Vietnamesisch, Deutsch C2, Magister Theologiae Note 1,5
+- Kurse: Online via Zoom, A1–C1, Einzel- und Gruppenunterricht
+- Probestunde: KOSTENLOS, 60 Minuten
+- Pakete: INTENSIV (549 €, 10 Doppelstunden), DURCHSTARTER (849 €, 15 Doppelstunden)
+- Kontakt: WhatsApp +49 152 079 950 82 oder Zalo
+- Zielgruppe: Vietnamesische Pflegekräfte, Auszubildende, Neuankömmlinge in Deutschland
+- Prüfungsvorbereitung: Goethe, telc, ÖSD
+
+Antworte freundlich, kurz und klar. Antworte auf Vietnamesisch wenn die Frage auf Vietnamesisch ist, auf Deutsch wenn auf Deutsch. Empfehle bei komplexen Fragen die kostenlose Probestunde oder WhatsApp-Kontakt.`;
+
+let chatHistory = [];
+let chatOpen = false;
+
+function toggleChat() {
+  chatOpen = !chatOpen;
+  const box = document.getElementById('chat-box');
+  const badge = document.getElementById('chat-badge');
+  box.classList.toggle('open', chatOpen);
+  if (chatOpen) badge.style.display = 'none';
+
+  // Begrüßung setzen
+  const wm = document.getElementById('welcome-msg');
+  wm.textContent = isDE() ? WELCOME_DE : WELCOME_VI;
+  if (chatHistory.length === 0) {
+    chatHistory.push({ role: 'assistant', content: isDE() ? WELCOME_DE : WELCOME_VI });
+  }
+}
+
+async function sendMsg() {
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim();
+  if (!text) return;
+  input.value = '';
+
+  appendMsg(text, 'user');
+  chatHistory.push({ role: 'user', content: text });
+
+  const loading = appendMsg(isDE() ? 'Schreibe...' : 'Đang trả lời...', 'bot', true);
+
+      // Regelbasierter Bot (funktioniert ohne Server)
+    try {
+      await new Promise(r => setTimeout(r, 700));
+      const reply = getBotReply(text);
+      loading.remove();
+      appendMsg(reply, 'bot');
+      chatHistory.push({ role: 'assistant', content: reply });
+    } catch(e) {
+      loading.remove();
+      appendMsg(isDE() ? 'Fehler. Bitte WhatsApp nutzen.' : 'Lỗi. Vui lòng nhắn WhatsApp.', 'bot');
+    }
+}
+
+function appendMsg(text, who, loading=false) {
+  const box = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = 'msg msg-' + (who === 'bot' ? 'bot' : 'user') + (loading ? ' msg-loading' : '');
+  div.textContent = text;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+  return div;
+}
+</script>
+</body>
+</html>
